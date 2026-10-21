@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVERSIQ Global | Intelligent Mobility. Seamless Journeys.</title>
+    <meta name="description" content="Traversiq Global by Shubham Madhavi — US F1/B1/B2 Visa Specialist with first-hand US ground experience, Global Tourist Visas, Worldwide Flights, Bespoke Tours & Passport Services. Serving Panvel, Navi Mumbai & PAN India.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0B132B',
+                        slatedark: '#1C2541',
+                        crispwhite: '#F8FAFC',
+                        cobalt: '#2563EB',
+                        gold: '#D4AF37',
+                        goldlight: '#F3E5AB',
+                        whatsapp: '#25D366',
+                        whatsappdark: '#1DA851'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'glow-cobalt': '0 0 35px -5px rgba(37, 99, 235, 0.35)',
+                        'glow-whatsapp': '0 10px 30px -5px rgba(37, 211, 102, 0.4)',
+                        'glow-gold': '0 0 35px -5px rgba(212, 175, 55, 0.25)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Executive Styling & Subtle Grid Background */
+        body {
+            background-color: #0B132B;
+            color: #F8FAFC;
+            overflow-x: hidden;
+        }
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        }
+        .glass-card {
+            background: rgba(28, 37, 65, 0.65);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(248, 250, 252, 0.09);
+        }
+        .glass-nav {
+            background: rgba(11, 19, 43, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(248, 250, 252, 0.08);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA820A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .service-chip-active {
+            background-color: rgba(37, 99, 235, 0.25);
+            border-color: #2563EB;
+            color: #FFFFFF;
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+        }
+        /* Smooth pulse for live status indicator */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.85); opacity: 0.9; }
+            70% { transform: scale(1.9); opacity: 0; }
+            100% { transform: scale(1.9); opacity: 0; }
+        }
+        .pulse-dot::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            background-color: #25D366;
+            animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-cobalt selection:text-white pb-20 md:pb-0">
+
+    <!-- Custom Non-Intrusive Toast Notification (Replaces alert) -->
+    <div id="toast-notification" class="fixed top-24 right-5 z-50 transform translate-x-full opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="glass-card border border-whatsapp/40 bg-obsidian/95 text-crispwhite px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-whatsapp/20 text-whatsapp flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div>
+                <p id="toast-title" class="text-sm font-semibold text-white">Copied to Clipboard</p>
+                <p id="toast-desc" class="text-xs text-slate-300">Ready to paste or share.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         1. STICKY TOP NAVBAR
+    =========================================== -->
+    <header class="fixed top-0 left-0 right-0 z-40 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Custom SVG Traversiq Monogram Logo + Wordmark -->
+                <a href="#" class="flex items-center gap-3.5 group focus:outline-none">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-cobalt via-blue-700 to-slatedark p-0.5 shadow-glow-cobalt group-hover:scale-105 transition-transform">
+                        <div class="w-full h-full bg-obsidian rounded-[10px] flex items-center justify-center relative overflow-hidden">
+                            <!-- Geometric "T" + Compass Vector Arrow SVG -->
+                            <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Top Bar of Geometric T -->
+                                <path d="M7 10H33L29.5 15H10.5L7 10Z" fill="#F8FAFC"/>
+                                <!-- Vertical Pillar of T -->
+                                <path d="M17.5 15H22.5V33L17.5 29.5V15Z" fill="#2563EB"/>
+                                <!-- Dynamic Paper-Plane / Compass Vector Arrow Cutting Across -->
+                                <path d="M9 26L33 11L24 29L20.5 22.5L9 26Z" fill="#D4AF37" fill-opacity="0.95"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="flex items-center gap-1.5">
+                            <span class="font-display font-extrabold text-xl sm:text-2xl tracking-wider text-white">TRAVERSIQ</span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded bg-cobalt/20 text-blue-400 border border-cobalt/30">Global</span>
+                        </div>
+                        <span class="text-[11px] text-slate-400 tracking-wide hidden sm:block">Intelligent Mobility. Seamless Journeys.</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
+                    <a href="#services" class="hover:text-white transition-colors">Services</a>
+                    <a href="#us-specialist" class="hover:text-white transition-colors flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-cobalt"></span>
+                        US Visa Specialist
+                    </a>
+                    <a href="#vip-media" class="hover:text-gold transition-colors flex items-center gap-1">
+                        <i class="fa-solid fa-crown text-gold text-xs"></i>
+                        VIP Media Add-On
+                    </a>
+                    <a href="#inquiry-builder" class="hover:text-white transition-colors">Quick Inquiry</a>
+                    <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+                </nav>
+
+                <!-- Primary Navbar WhatsApp CTA -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20visited%20traversiq.com%20and%20would%20like%20to%20inquire%20about%20your%20visa%20and%20travel%20services."
+                       target="_blank" rel="noopener noreferrer"
+                       class="bg-whatsapp hover:bg-whatsappdark text-obsidian font-display font-bold text-sm px-5 py-2.5 rounded-xl shadow-glow-whatsapp flex items-center gap-2 transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Chat on WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden text-slate-200 hover:text-white p-2.5 rounded-xl bg-slatedark/80 border border-white/10">
+                    <i id="mobile-menu-icon" class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-obsidian/98 border-b border-white/10 px-4 pt-3 pb-6 space-y-3">
+            <a href="#services" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-slate-200 hover:bg-slatedark font-medium">Services</a>
+            <a href="#us-specialist" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-slate-200 hover:bg-slatedark font-medium">US Visa Specialist (F1 / B1-B2)</a>
+            <a href="#vip-media" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-gold hover:bg-slatedark font-medium"><i class="fa-solid fa-crown mr-2"></i>VIP Media Add-On</a>
+            <a href="#inquiry-builder" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-slate-200 hover:bg-slatedark font-medium">10-Second Inquiry Builder</a>
+            <a href="#contact" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-slate-200 hover:bg-slatedark font-medium">Founder & Contact</a>
+            <div class="pt-2">
+                <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20visited%20traversiq.com%20and%20need%20assistance%20with%20a%20visa%20or%20travel%20booking."
+                   target="_blank" rel="noopener noreferrer"
+                   class="w-full bg-whatsapp text-obsidian font-display font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-glow-whatsapp">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Chat on WhatsApp (+91 93246 66369)</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         2. HERO SECTION
+    =========================================== -->
+    <section class="relative pt-28 pb-16 md:pt-36 md:pb-24 bg-grid-pattern overflow-hidden">
+        <!-- Ambient Radial Lighting -->
+        <div class="absolute top-12 left-1/4 w-96 h-96 bg-cobalt/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 right-10 w-80 h-80 bg-whatsapp/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: High-Converting Copy & Dual CTAs -->
+                <div class="lg:col-span-7 space-y-6 text-left">
+                    
+                    <!-- Top Credibility Badge -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slatedark/90 border border-cobalt/40 text-xs sm:text-sm font-semibold text-blue-200 shadow-sm">
+                        <span class="relative flex h-2.5 w-2.5 pulse-dot">
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-whatsapp"></span>
+                        </span>
+                        <span>PAN India Service • First-Hand US Ground Experience</span>
+                    </div>
+
+                    <!-- Main Executive Headline -->
+                    <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-[54px] text-white leading-[1.12] tracking-tight">
+                        Global Visas, Flights &amp; Bespoke Travel — <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-goldlight">Engineered Without Friction.</span>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl font-normal">
+                        From US F1/B1/B2 consular interview prep and global tourist visas to worldwide flights, curated holidays, and passport assistance. Instant concierge support directly on WhatsApp.
+                    </p>
+
+                    <!-- Dual Action CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                        <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20want%20to%20start%20an%20inquiry%20for%20Visa%20%2F%20Travel%20services."
+                           target="_blank" rel="noopener noreferrer"
+                           class="bg-whatsapp hover:bg-whatsappdark text-obsidian font-display font-extrabold text-base sm:text-lg px-7 py-4 rounded-2xl shadow-glow-whatsapp flex items-center justify-center gap-3 transition-all transform hover:-translate-y-0.5">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Start Instant WhatsApp Inquiry</span>
+                        </a>
+                        <a href="#inquiry-builder"
+                           class="glass-card hover:bg-slatedark text-white font-display font-semibold text-base px-6 py-4 rounded-2xl border border-white/15 hover:border-cobalt/60 flex items-center justify-center gap-2.5 transition-all">
+                            <i class="fa-solid fa-sliders text-blue-400"></i>
+                            <span>Use Quick Trip &amp; Visa Builder</span>
+                        </a>
+                    </div>
+
+                    <!-- Direct Contact Micro-Bar -->
+                    <div class="pt-2 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs sm:text-sm text-slate-400">
+                        <span class="flex items-center gap-2">
+                            <i class="fa-solid fa-user-shield text-gold"></i>
+                            Led by <strong class="text-slate-200">Shubham Madhavi</strong>
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone-volume text-whatsapp"></i>
+                            <a href="tel:+919324666369" class="hover:text-white transition-colors">+91 93246 66369</a>
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-blue-400"></i>
+                            Panvel, Navi Mumbai • Available PAN India
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Executive Mobility Console Card -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card rounded-3xl p-6 sm:p-7 border border-white/10 shadow-2xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-36 h-36 bg-cobalt/15 rounded-full blur-2xl pointer-events-none"></div>
+                        
+                        <!-- Card Header -->
+                        <div class="flex items-center justify-between pb-5 mb-5 border-b border-white/10">
+                            <div>
+                                <span class="text-[11px] font-bold uppercase tracking-widest text-blue-400 block">Direct Concierge Desk</span>
+                                <h2 class="font-display font-bold text-lg sm:text-xl text-white mt-0.5">1-Click WhatsApp Routing</h2>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-whatsapp/15 text-whatsapp border border-whatsapp/30 text-xs font-semibold flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-whatsapp animate-ping"></span>
+                                Online Now
+                            </span>
+                        </div>
+
+                        <!-- Rapid Trigger Options -->
+                        <p class="text-xs text-slate-300 mb-3.5">Tap your priority need below to launch a pre-filled chat with Shubham Madhavi:</p>
+                        
+                        <div class="space-y-2.5">
+                            <!-- Option 1 -->
+                            <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20need%20expert%20guidance%20and%20mock%20interview%20prep%20for%20a%20US%20Visa%20%28F1%20Student%20%2F%20B1-B2%20Tourist%29."
+                               target="_blank" rel="noopener noreferrer"
+                               class="group flex items-center justify-between p-3.5 rounded-2xl bg-obsidian/70 hover:bg-cobalt/20 border border-white/10 hover:border-cobalt/50 transition-all">
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-10 h-10 rounded-xl bg-cobalt/20 text-blue-400 flex items-center justify-center font-bold shrink-0">
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-sm font-bold text-white group-hover:text-blue-300 transition-colors">US F1 &amp; B1/B2 Visa Specialist</h3>
+                                        <p class="text-xs text-slate-400">DS-160 Audit + 1-on-1 Consular Mock Prep</p>
+                                    </div>
+                                </div>
+                                <i class="fa-brands fa-whatsapp text-whatsapp text-lg group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+
+                            <!-- Option 2 -->
+                            <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20need%20assistance%20with%20a%20Global%20Tourist%20%2F%20Business%20Visa%20%28Schengen%20%2F%20UAE%20%2F%20UK%20%2F%20Global%29."
+                               target="_blank" rel="noopener noreferrer"
+                               class="group flex items-center justify-between p-3.5 rounded-2xl bg-obsidian/70 hover:bg-cobalt/20 border border-white/10 hover:border-cobalt/50 transition-all">
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold shrink-0">
+                                        <i class="fa-solid fa-earth-americas"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-sm font-bold text-white group-hover:text-sky-300 transition-colors">Schengen, UAE &amp; World Visas</h3>
+                                        <p class="text-xs text-slate-400">Complete File Prep &amp; Appointment Slot</p>
+                                    </div>
+                                </div>
+                                <i class="fa-brands fa-whatsapp text-whatsapp text-lg group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+
+                            <!-- Option 3 -->
+                            <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20am%20looking%20for%20Flight%20Bookings%20%2F%20Hotel%20Deals%20%2F%20Custom%20Holiday%20Tour%20Package."
+                               target="_blank" rel="noopener noreferrer"
+                               class="group flex items-center justify-between p-3.5 rounded-2xl bg-obsidian/70 hover:bg-cobalt/20 border border-white/10 hover:border-cobalt/50 transition-all">
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold shrink-0">
+                                        <i class="fa-solid fa-plane-departure"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">Flights, Stays &amp; Global/India Tours</h3>
+                                        <p class="text-xs text-slate-400">Best Airfares &amp; A-to-Z Custom Itineraries</p>
+                                    </div>
+                                </div>
+                                <i class="fa-brands fa-whatsapp text-whatsapp text-lg group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+
+                            <!-- Option 4 -->
+                            <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20need%20help%20with%20a%20Fresh%20Passport%20Application%20or%20Passport%20Renewal."
+                               target="_blank" rel="noopener noreferrer"
+                               class="group flex items-center justify-between p-3.5 rounded-2xl bg-obsidian/70 hover:bg-cobalt/20 border border-white/10 hover:border-cobalt/50 transition-all">
+                                <div class="flex items-center gap-3.5">
+                                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold shrink-0">
+                                        <i class="fa-solid fa-passport"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">Passport Application &amp; Renewal</h3>
+                                        <p class="text-xs text-slate-400">Fresh, Renewal &amp; Tatkaal Form Guidance</p>
+                                    </div>
+                                </div>
+                                <i class="fa-brands fa-whatsapp text-whatsapp text-lg group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <!-- Bottom Mini Footer inside Console -->
+                        <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
+                            <span>Official Domains: <strong class="text-slate-200">traversiq.com | .in</strong></span>
+                            <a href="#inquiry-builder" class="text-blue-400 hover:underline font-medium">Custom Builder &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 4-Pillar Trust Metrics Bar -->
+            <div class="mt-14 pt-10 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <div class="glass-card p-5 rounded-2xl flex items-start gap-4 border border-white/5">
+                    <div class="w-11 h-11 rounded-xl bg-cobalt/20 border border-cobalt/40 text-blue-400 flex items-center justify-center shrink-0 text-lg">
+                        <i class="fa-solid fa-flag-usa"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-white text-sm sm:text-base">First-Hand USA Ground Experience</h3>
+                        <p class="text-xs text-slate-400 mt-1">Real lived &amp; traveled US insight for authentic consular prep.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl flex items-start gap-4 border border-white/5">
+                    <div class="w-11 h-11 rounded-xl bg-cobalt/20 border border-cobalt/40 text-blue-400 flex items-center justify-center shrink-0 text-lg">
+                        <i class="fa-solid fa-route"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-white text-sm sm:text-base">A-to-Z Flights &amp; Tours</h3>
+                        <p class="text-xs text-slate-400 mt-1">Domestic All-India &amp; international flights, hotels &amp; holidays.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl flex items-start gap-4 border border-white/5">
+                    <div class="w-11 h-11 rounded-xl bg-cobalt/20 border border-cobalt/40 text-blue-400 flex items-center justify-center shrink-0 text-lg">
+                        <i class="fa-solid fa-file-shield"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-white text-sm sm:text-base">DS-160 &amp; Consular Mock Prep</h3>
+                        <p class="text-xs text-slate-400 mt-1">Rigorous financial trail &amp; interview drills to counter refusals.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl flex items-start gap-4 border border-white/5">
+                    <div class="w-11 h-11 rounded-xl bg-whatsapp/15 border border-whatsapp/30 text-whatsapp flex items-center justify-center shrink-0 text-lg">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-white text-sm sm:text-base">PAN India Digital Support</h3>
+                        <p class="text-xs text-slate-400 mt-1">Based in Panvel, Navi Mumbai — serving clients across India.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         3. INTERACTIVE "10-SECOND WHATSAPP INQUIRY BUILDER"
+    =========================================== -->
+    <section id="inquiry-builder" class="py-16 md:py-24 bg-slatedark/50 border-y border-white/10 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Heading -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="px-3.5 py-1.5 rounded-full bg-cobalt/20 border border-cobalt/40 text-blue-300 text-xs font-bold uppercase tracking-widest">
+                    Interactive Concierge Tool
+                </span>
+                <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white mt-4">
+                    10-Second WhatsApp Inquiry Builder
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base mt-2.5">
+                    Select your service and trip details below to generate a structured brief and connect directly with Shubham Madhavi on WhatsApp.
+                </p>
+            </div>
+
+            <!-- Builder Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left 7 Columns: Interactive Inputs -->
+                <div class="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-8 border border-white/10 space-y-6">
+                    
+                    <!-- STEP 1: Select Service -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-blue-300 mb-3">
+                            Step 1: Select Your Primary Service
+                        </label>
+                        <!-- Interactive Service Pills -->
+                        <div id="service-pills-container" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                            <button type="button" data-service="US F1 Student Visa" class="service-pill service-chip-active text-left px-4 py-3 rounded-xl border border-white/15 bg-obsidian/60 hover:border-cobalt transition-all flex items-center gap-2.5 text-xs sm:text-sm font-semibold">
+                                <i class="fa-solid fa-graduation-cap text-blue-400"></i>
+                                <span>US F1 Student Visa</span>
+                            </button>
+                            <button type="button" data-service="US B1/B2 Tourist/Business Visa" class="service-pill text-left px-4 py-3 rounded-xl border border-white/15 bg-obsidian/60 hover:border-cobalt text-slate-300 transition-all flex items-center gap-2.5 text-xs sm:text-sm font-semibold">
+                                <i class="fa-solid fa-flag-usa text-blue-400"></i>
+                                <span>US B1/B2 Tourist/Business Visa</span>
+                            </button>
+                            <button type="button" data-service="Global Tourist Visa (Schengen, UAE, UK, etc.)" class="service-pill text-left px-4 py-3 rounded-xl border border-white/15 bg-obsidian/60 hover:border-cobalt text-slate-300 transition-all flex items-center gap-2.5 text-xs sm:text-sm font-semibold">
+                                <i class="fa-solid fa-earth-americas text-sky-400"></i>
+                                <span>Global Tourist Visa (Schengen/UAE)</span>
+                            </button>
+                            <button type="button" data-service="Flight & Hotel Booking" class="service-pill text-left px-4 py-3 rounded-xl border border-white/15 bg-obsidian/60 hover:border-cobalt text-slate-300 transition-all flex items-center gap-2.5 text-xs sm:text-sm font-semibold">
+                                <i class="fa-solid fa-plane-up text-emerald-400"></i>
+                                <span>Flight &amp; Hotel Booking</span>
+                            </button>
+                            <button type="button" data-service="Domestic / International Tour Package" class="service-pill text-left px-4 py-3 rounded-xl border border-white/15 bg-obsidian/60 hover:border-cobalt text-slate-300 transition-all flex items-center gap-2.5 text-xs sm:text-sm font-semibold">
+                                <i class="fa-solid fa-suitcase-rolling text-purple-400"></i>
+                                <span>Domestic / World Tour Package</span>
+                            </button>
+                            <button type="button" data-service="Passport Application / Renewal" class="service-pill text-left px-4 py-3 rounded-xl border border-white/15 bg-obsidian/60 hover:border-cobalt text-slate-300 transition-all flex items-center gap-2.5 text-xs sm:text-sm font-semibold">
+                                <i class="fa-solid fa-passport text-amber-400"></i>
+                                <span>Passport Application / Renewal</span>
+                            </button>
+                            <button type="button" data-service="VIP Cinematic Photo/Video Add-On" class="service-pill sm:col-span-2 text-left px-4 py-3 rounded-xl border border-gold/40 bg-obsidian/60 hover:border-gold text-goldlight transition-all flex items-center gap-2.5 text-xs sm:text-sm font-semibold">
+                                <i class="fa-solid fa-video text-gold"></i>
+                                <span>VIP Cinematic Photo / 4K Video &amp; Drone Trip Add-On</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Destination / City & Target Travel Month -->
+                    <div>
+                        <label for="builder-destination" class="block text-xs font-bold uppercase tracking-wider text-blue-300 mb-2">
+                            Step 2: Destination Country / City &amp; Target Month <span class="text-slate-400 font-normal">(Optional)</span>
+                        </label>
+                        <input type="text" id="builder-destination" placeholder="e.g., USA (Fall Intake), Schengen Europe in June, Dubai, Kashmir..."
+                               class="w-full px-4 py-3.5 rounded-xl bg-obsidian/90 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cobalt transition-colors">
+                        <!-- Quick-Fill Suggestion Tags -->
+                        <div class="flex flex-wrap items-center gap-1.5 mt-2.5">
+                            <span class="text-[11px] text-slate-400 mr-1">Quick tags:</span>
+                            <button type="button" data-dest="USA - Upcoming Intake / Consular Interview" class="dest-tag text-[11px] px-2.5 py-1 rounded-lg bg-obsidian border border-white/10 text-slate-300 hover:border-cobalt hover:text-white transition-colors">USA (F1/B1/B2)</button>
+                            <button type="button" data-dest="Schengen Europe - Next Month" class="dest-tag text-[11px] px-2.5 py-1 rounded-lg bg-obsidian border border-white/10 text-slate-300 hover:border-cobalt hover:text-white transition-colors">Schengen Europe</button>
+                            <button type="button" data-dest="Dubai / UAE Trip" class="dest-tag text-[11px] px-2.5 py-1 rounded-lg bg-obsidian border border-white/10 text-slate-300 hover:border-cobalt hover:text-white transition-colors">Dubai / UAE</button>
+                            <button type="button" data-dest="Pan-India Domestic Tour" class="dest-tag text-[11px] px-2.5 py-1 rounded-lg bg-obsidian border border-white/10 text-slate-300 hover:border-cobalt hover:text-white transition-colors">India Holiday</button>
+                            <button type="button" data-dest="Panvel / Navi Mumbai Passport PSK" class="dest-tag text-[11px] px-2.5 py-1 rounded-lg bg-obsidian border border-white/10 text-slate-300 hover:border-cobalt hover:text-white transition-colors">Passport Renewal</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Visitor Name & Current City -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="builder-name" class="block text-xs font-bold uppercase tracking-wider text-blue-300 mb-2">
+                                Step 3: Your Name &amp; City <span class="text-slate-400 font-normal">(Optional)</span>
+                            </label>
+                            <input type="text" id="builder-name" placeholder="e.g., Rohan from Navi Mumbai"
+                                   class="w-full px-4 py-3.5 rounded-xl bg-obsidian/90 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cobalt transition-colors">
+                        </div>
+                        <div>
+                            <label for="builder-notes" class="block text-xs font-bold uppercase tracking-wider text-blue-300 mb-2">
+                                Specific Requirement <span class="text-slate-400 font-normal">(Optional)</span>
+                            </label>
+                            <input type="text" id="builder-notes" placeholder="e.g., Need 1-on-1 mock interview / 4 pax tickets"
+                                   class="w-full px-4 py-3.5 rounded-xl bg-obsidian/90 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cobalt transition-colors">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right 5 Columns: Live WhatsApp Preview & Launch Button -->
+                <div class="lg:col-span-5 glass-card rounded-3xl p-6 sm:p-8 border border-whatsapp/30 shadow-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between pb-4 mb-5 border-b border-white/10">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-whatsapp/20 text-whatsapp flex items-center justify-center text-xl">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-bold text-white text-base">Live WhatsApp Message Preview</h3>
+                                    <p class="text-xs text-slate-400">Recipient: Shubham Madhavi (+91 93246 66369)</p>
+                                </div>
+                            </div>
+                            <button type="button" id="copy-preview-btn" title="Copy Message Text" class="text-xs px-3 py-1.5 rounded-lg bg-obsidian hover:bg-slatedark text-slate-300 border border-white/10 transition-colors flex items-center gap-1.5">
+                                <i class="fa-regular fa-copy"></i>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+
+                        <!-- Simulated WhatsApp Bubble -->
+                        <div class="bg-[#0b1814] border border-whatsapp/25 rounded-2xl rounded-tl-sm p-4 sm:p-5 text-sm text-slate-100 font-sans leading-relaxed whitespace-pre-line shadow-inner min-h-[160px]" id="whatsapp-live-preview">Hi Shubham (Traversiq Global),
+
+I would like to inquire about:
+• Service: US F1 Student Visa
+• Destination / Timeline: Flexible / To be discussed
+
+Please share the next steps and consultation details.</div>
+                    </div>
+
+                    <!-- Primary Launch CTA -->
+                    <div class="mt-6 space-y-3">
+                        <a id="builder-whatsapp-launch"
+                           href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%0A%0AI%20would%20like%20to%20inquire%20about%3A%0A%E2%80%A2%20Service%3A%20US%20F1%20Student%20Visa%0A%E2%80%A2%20Destination%20%2F%20Timeline%3A%20Flexible%20%2F%20To%20be%20discussed%0A%0APlease%20share%20the%20next%20steps%20and%20consultation%20details."
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full bg-whatsapp hover:bg-whatsappdark text-obsidian font-display font-extrabold text-base sm:text-lg py-4 px-6 rounded-2xl shadow-glow-whatsapp flex items-center justify-center gap-3 transition-all transform hover:-translate-y-0.5">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Launch Chat on WhatsApp (+91 93246 66369)</span>
+                        </a>
+                        <p class="text-[11px] text-center text-slate-400">
+                            <i class="fa-solid fa-lock text-whatsapp mr-1"></i>Direct 1-on-1 encrypted chat with Founder Shubham Madhavi. Typical response time: Under 15 mins.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         4. CORE SERVICES GRID (4 HIGH-IMPACT CARDS)
+    =========================================== -->
+    <section id="services" class="py-16 md:py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="px-3.5 py-1.5 rounded-full bg-cobalt/20 border border-cobalt/40 text-blue-300 text-xs font-bold uppercase tracking-widest">
+                        Core Mobility &amp; Travel Verticals
+                    </span>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-4">
+                        Complete A-to-Z Global Travel &amp; Visa Architecture
+                    </h2>
+                </div>
+                <p class="text-slate-300 text-sm sm:text-base max-w-md">
+                    Every vertical is backed by meticulous document hygiene and instant WhatsApp support—whether you are flying across India or clearing a US Embassy interview.
+                </p>
+            </div>
+
+            <!-- 4 High-Impact Service Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+                
+                <!-- CARD 1: US Student (F1) & B1/B2 Visa Specialist -->
+                <div class="glass-card rounded-3xl p-7 sm:p-8 border border-cobalt/40 hover:border-cobalt transition-all flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 px-4 py-1.5 rounded-bl-2xl bg-cobalt text-white text-[11px] font-bold uppercase tracking-wider">
+                        Flagship Specialty
+                    </div>
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-cobalt/20 border border-cobalt/40 text-blue-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl sm:text-2xl text-white">
+                            US Student (F1) &amp; B1/B2 Visa Specialist
+                        </h3>
+                        <p class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+                            Guided directly by <strong class="text-white">Shubham's first-hand US lived &amp; ground experience</strong>. We go far beyond basic form-filling to prepare you for what US Consular Officers actually evaluate.
+                        </p>
+                        <ul class="mt-5 space-y-2.5 text-xs sm:text-sm text-slate-300">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-whatsapp"></i><span>Precision DS-160 Vetting &amp; Red-Flag Elimination</span></li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-whatsapp"></i><span>Financial Sponsorship &amp; Home-Ties Audit (Countering 214b)</span></li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-whatsapp"></i><span>1-on-1 Realistic Consular Mock Interviews (F1, B1/B2)</span></li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-5 border-t border-white/10 flex flex-col sm:flex-row gap-3">
+                        <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20want%20to%20book%20a%20consultation%20for%20my%20US%20Visa%20%28F1%20Student%20%2F%20B1-B2%20Tourist%29%20application%20and%20mock%20interview."
+                           target="_blank" rel="noopener noreferrer"
+                           class="flex-1 bg-whatsapp hover:bg-whatsappdark text-obsidian font-display font-bold text-sm py-3.5 px-5 rounded-xl flex items-center justify-center gap-2 transition-all">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Inquire for US Visa on WhatsApp</span>
+                        </a>
+                        <button type="button" onclick="selectInBuilder('US F1 Student Visa')" class="px-4 py-3.5 rounded-xl bg-obsidian hover:bg-slatedark text-slate-200 border border-white/10 text-xs font-semibold transition-colors">
+                            Customize Brief
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 2: Worldwide Tourist & Business Visas -->
+                <div class="glass-card rounded-3xl p-7 sm:p-8 border border-white/10 hover:border-cobalt/60 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-sky-500/20 border border-sky-400/30 text-sky-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl sm:text-2xl text-white">
+                            Worldwide Tourist &amp; Business Visas
+                        </h3>
+                        <p class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+                            End-to-end visa file engineering for <strong class="text-white">Schengen Europe, UAE (Dubai), UK, Canada, Australia, and Asian hubs</strong>—structured for high approval confidence.
+                        </p>
+                        <ul class="mt-5 space-y-2.5 text-xs sm:text-sm text-slate-300">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-whatsapp"></i><span>Custom Cover Letters, Travel Itineraries &amp; Checklist Curation</span></li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-whatsapp"></i><span>VFS / Embassy Appointment Scheduling &amp; Biometric Guidance</span></li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-whatsapp"></i><span>Fast-Track E-Visas (UAE, Vietnam, Singapore, Malaysia, etc.)</span></li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-5 border-t border-white/10 flex flex-col sm:flex-row gap-3">
+                        <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20need%20assistance%20with%20a%20Worldwide%20Tourist%20%2F%20Business%20Visa%20%28Schengen%2C%20UAE%2C%20UK%2C%20etc.%29."
+                           target="_blank" rel="noopener noreferrer"
+                           class="flex-1 bg-whatsapp hover:bg-whatsappdark text-obsidian font-display font-bold text-sm py-3.5 px-5 rounded-xl flex items-center justify-center gap-2 transition-all">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Start Global Visa File on WhatsApp</span>
+                        </a>
+                        <button type="button" onclick="selectInBuilder('Global Tourist Visa (Schengen, UAE, UK, etc.)')" class="px-4 py-3.5 rounded-xl bg-obsidian hover:bg-slatedark text-slate-200 border border-white/10 text-xs font-semibold transition-colors">
+                            Customize Brief
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 3: Flights, Hotels & All-India / World Tours -->
+                <div class="glass-card rounded-3xl p-7 sm:p-8 border border-white/10 hover:border-cobalt/60 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 border border-emerald-400/30 text-emerald-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-plane-circle-check"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl sm:text-2xl text-white">
+                            Flights, Hotels &amp; All-India / World Tours
+                        </h3>
+                        <p class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+                            Competitive domestic and international airfares, verified luxury or budget hotel deals, and bespoke family, honeymoon, or corporate itineraries across India and the world.
+                        </p>
+                        <ul class="mt-5 space-y-2.5 text-xs sm:text-sm text-slate-300">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-whatsapp"></i><span>Student Special Fares, Extra Baggage Deals &amp; Group Ticketing</span></li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-whatsapp"></i><span>Curated Domestic Holidays (Kashmir, Goa, Kerala, Rajasthan, NE)</span></li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-whatsapp"></i><span>Complete International Land &amp; Cruise Packages</span></li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-5 border-t border-white/10 flex flex-col sm:flex-row gap-3">
+                        <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20would%20like%20to%20request%20rates%20for%20Flights%2C%20Hotels%2C%20or%20a%20Custom%20Tour%20Package."
+                           target="_blank" rel="noopener noreferrer"
+                           class="flex-1 bg-whatsapp hover:bg-whatsappdark text-obsidian font-display font-bold text-sm py-3.5 px-5 rounded-xl flex items-center justify-center gap-2 transition-all">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Request Flight &amp; Tour Quote</span>
+                        </a>
+                        <button type="button" onclick="selectInBuilder('Flight & Hotel Booking')" class="px-4 py-3.5 rounded-xl bg-obsidian hover:bg-slatedark text-slate-200 border border-white/10 text-xs font-semibold transition-colors">
+                            Customize Brief
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 4: Passport Application & Renewal -->
+                <div class="glass-card rounded-3xl p-7 sm:p-8 border border-white/10 hover:border-cobalt/60 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/20 border border-amber-400/30 text-amber-400 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-id-card-clip"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl sm:text-2xl text-white">
+                            Passport Application &amp; Renewal
+                        </h3>
+                        <p class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+                            Zero-error Indian passport application filing, reissue/renewal, damaged/lost passport replacement, and Tatkaal slot advisory with complete document verification.
+                        </p>
+                        <ul class="mt-5 space-y-2.5 text-xs sm:text-sm text-slate-300">
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-whatsapp"></i><span>Fresh Passport &amp; Renewal (Normal &amp; Tatkaal Categories)</span></li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-whatsapp"></i><span>Name/Address Correction, Minor Passports &amp; PCC Filing</span></li>
+                            <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-whatsapp"></i><span>Dedicated PSK Appointment Booking &amp; Document Pre-Check</span></li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-5 border-t border-white/10 flex flex-col sm:flex-row gap-3">
+                        <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20need%20assistance%20with%20a%20Fresh%20Passport%20Application%20or%20Passport%20Renewal."
+                           target="_blank" rel="noopener noreferrer"
+                           class="flex-1 bg-whatsapp hover:bg-whatsappdark text-obsidian font-display font-bold text-sm py-3.5 px-5 rounded-xl flex items-center justify-center gap-2 transition-all">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Get Passport Help on WhatsApp</span>
+                        </a>
+                        <button type="button" onclick="selectInBuilder('Passport Application / Renewal')" class="px-4 py-3.5 rounded-xl bg-obsidian hover:bg-slatedark text-slate-200 border border-white/10 text-xs font-semibold transition-colors">
+                            Customize Brief
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         5. US VISA SPECIALIST SPOTLIGHT SECTION
+    =========================================== -->
+    <section id="us-specialist" class="py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-7 sm:p-10 lg:p-12 border border-cobalt/40 bg-gradient-to-br from-slatedark via-obsidian to-slatedark relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8 space-y-4">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cobalt/20 border border-cobalt/40 text-blue-300 text-xs font-bold uppercase tracking-wider">
+                            <i class="fa-solid fa-star text-gold"></i>
+                            The Traversiq US Insider Advantage
+                        </div>
+                        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white">
+                            Applying for a US F1 Student or B1/B2 Visa? Don't Leave Your Interview to Guesswork.
+                        </h2>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            Having personally navigated the US visa system and lived on the ground in America, <strong class="text-white">Shubham Madhavi</strong> coaches applicants on authentic university selection rationale, financial sponsorship clarity, and strong home-country ties—eliminating scripted answers that trigger <span class="text-white font-semibold">INA 214(b) refusals</span>.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                            <div class="p-3.5 rounded-2xl bg-obsidian/80 border border-white/10">
+                                <span class="text-xs font-bold text-blue-400 uppercase">Step 01</span>
+                                <p class="text-sm font-bold text-white mt-0.5">DS-160 Deep Audit</p>
+                                <p class="text-xs text-slate-400 mt-1">Line-by-line review so your form backs your verbal answers.</p>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-obsidian/80 border border-white/10">
+                                <span class="text-xs font-bold text-blue-400 uppercase">Step 02</span>
+                                <p class="text-sm font-bold text-white mt-0.5">Financial &amp; Ties Strategy</p>
+                                <p class="text-xs text-slate-400 mt-1">Structuring CA reports, liquid funds, and career intent.</p>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-obsidian/80 border border-white/10">
+                                <span class="text-xs font-bold text-blue-400 uppercase">Step 03</span>
+                                <p class="text-sm font-bold text-white mt-0.5">1-on-1 Consular Drills</p>
+                                <p class="text-xs text-slate-400 mt-1">Simulated US embassy counter rounds with direct feedback.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-4 flex flex-col justify-center items-stretch bg-obsidian/90 p-6 rounded-2xl border border-white/10 space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-2xl bg-cobalt/20 text-blue-400 flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-white text-base">Book Your US Visa Assessment</h3>
+                                <p class="text-xs text-slate-400">Fresh Applicants &amp; Refusal Re-Applications</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Message directly on WhatsApp with your target intake or travel month to schedule your 1-on-1 profile evaluation.
+                        </p>
+                        <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20want%20to%20schedule%20a%201-on-1%20US%20Visa%20%28F1%20%2F%20B1-B2%29%20profile%20audit%20and%20mock%20interview%20session."
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full bg-whatsapp hover:bg-whatsappdark text-obsidian font-display font-extrabold text-sm py-4 px-5 rounded-xl shadow-glow-whatsapp flex items-center justify-center gap-2 transition-all">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Audit My US Visa Profile</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         6. EXCLUSIVE VIP UPGRADE BANNER ("TRAVERSIQ STUDIO")
+    =========================================== -->
+    <section id="vip-media" class="py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="rounded-3xl p-7 sm:p-10 lg:p-12 bg-gradient-to-r from-[#090D1A] via-[#131B33] to-[#1A170D] border border-gold/40 shadow-glow-gold relative overflow-hidden">
+                <!-- Decorative Gold Ambient Glow -->
+                <div class="absolute -top-20 -right-20 w-72 h-72 bg-gold/15 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                    <div class="lg:col-span-8 space-y-4">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold/15 border border-gold/40 text-goldlight text-xs font-bold uppercase tracking-widest">
+                            <i class="fa-solid fa-film text-gold"></i>
+                            <span>Traversiq Studio — Optional Luxury Add-On</span>
+                        </div>
+
+                        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white leading-tight">
+                            Want Your Journey Captured Professionally? <span class="gold-gradient-text">Cinematic 4K Film, Photo &amp; Drone Coverage.</span>
+                        </h2>
+
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
+                            Book our optional <strong class="text-goldlight">Pro Photography, Cinematic 4K Video &amp; Aerial Drone coverage</strong> for select milestone trips, honeymoons, luxury family vacations, and private expeditions. We handle your visas and itinerary—and turn your trip into a theatre-grade visual story.
+                        </p>
+
+                        <!-- Feature Badges -->
+                        <div class="flex flex-wrap items-center gap-3 pt-1 text-xs text-goldlight">
+                            <span class="px-3 py-1.5 rounded-xl bg-obsidian/80 border border-gold/30 flex items-center gap-1.5">
+                                <i class="fa-solid fa-camera-retro text-gold"></i> Pro Portrait &amp; Candid Stills
+                            </span>
+                            <span class="px-3 py-1.5 rounded-xl bg-obsidian/80 border border-gold/30 flex items-center gap-1.5">
+                                <i class="fa-solid fa-clapperboard text-gold"></i> 4K Color-Graded Cinema Reels
+                            </span>
+                            <span class="px-3 py-1.5 rounded-xl bg-obsidian/80 border border-gold/30 flex items-center gap-1.5">
+                                <i class="fa-solid fa-helicopter text-gold"></i> Aerial Drone Perspectives
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-4 flex flex-col items-stretch sm:items-end justify-center">
+                        <div class="w-full bg-obsidian/90 border border-gold/30 rounded-2xl p-6 text-center sm:text-left space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs uppercase tracking-widest text-gold font-bold">Bespoke Upgrade</span>
+                                <span class="text-[11px] px-2.5 py-0.5 rounded bg-gold/20 text-goldlight">Limited Dates</span>
+                            </div>
+                            <p class="text-xs text-slate-300">
+                                Available on request for custom domestic &amp; international tours. Check creator availability for your travel dates:
+                            </p>
+                            <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20would%20like%20to%20inquire%20about%20a%20Travel%20%2B%20VIP%20Cinematic%20Photo%2FVideo%20Package%20for%20my%20upcoming%20trip."
+                               target="_blank" rel="noopener noreferrer"
+                               class="w-full bg-gradient-to-r from-gold via-amber-400 to-gold hover:brightness-110 text-obsidian font-display font-extrabold text-sm py-4 px-5 rounded-xl shadow-lg flex items-center justify-center gap-2.5 transition-all">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>Inquire About Travel + Media Package on WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         7. FOUNDER & CREDIBILITY SECTION + CONTACT HUB
+    =========================================== -->
+    <section id="contact" class="py-16 md:py-24 bg-slatedark/40 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Left 6 Columns: Founder Profile & "Why Traversiq" Advantage -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="px-3.5 py-1.5 rounded-full bg-cobalt/20 border border-cobalt/40 text-blue-300 text-xs font-bold uppercase tracking-widest">
+                        Leadership &amp; Direct Accountability
+                    </span>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+                        Meet Your Principal Advisor
+                    </h2>
+                    
+                    <!-- Executive Founder Card (Upgraded Digital Version of Business Card) -->
+                    <div class="glass-card rounded-3xl p-6 sm:p-8 border border-white/15 relative overflow-hidden">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cobalt to-blue-900 border border-gold/40 flex items-center justify-center font-display font-extrabold text-2xl text-white shadow-lg shrink-0">
+                                    SM
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-extrabold text-2xl text-white">Shubham Madhavi</h3>
+                                    <p class="text-sm font-medium text-blue-400">Founder | Principal Travel Consultant</p>
+                                    <p class="text-xs text-slate-400 mt-0.5">TRAVERSIQ Global (<span class="text-slate-200">traversiq.com</span> | <span class="text-slate-200">traversiq.in</span>)</p>
+                                </div>
+                            </div>
+                            <button type="button" id="copy-vcard-btn" class="self-start sm:self-center text-xs px-3.5 py-2 rounded-xl bg-obsidian hover:bg-slatedark text-goldlight border border-gold/30 transition-colors flex items-center gap-1.5">
+                                <i class="fa-regular fa-address-card text-gold"></i>
+                                <span>Copy Contact Card</span>
+                            </button>
+                        </div>
+
+                        <!-- Why Traversiq Pillars -->
+                        <div class="mt-6 space-y-4">
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-8 h-8 rounded-lg bg-cobalt/20 text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check-double text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Real US Ground Experience</h4>
+                                    <p class="text-xs sm:text-sm text-slate-300 mt-0.5">Advised by someone who has personally traveled and experienced life on the ground in the United States—not an agent reading from a generic script.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-8 h-8 rounded-lg bg-cobalt/20 text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-shield-halved text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Zero-Error Documentation Hygiene</h4>
+                                    <p class="text-xs sm:text-sm text-slate-300 mt-0.5">Every passport form, DS-160, and Schengen cover dossier undergoes strict verification before submission.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-8 h-8 rounded-lg bg-whatsapp/20 text-whatsapp flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Direct WhatsApp Accessibility Without Middlemen</h4>
+                                    <p class="text-xs sm:text-sm text-slate-300 mt-0.5">No call-center queues. You communicate directly with the founder for rapid updates, ticket issuance, and interview prep.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right 6 Columns: Direct Contact Cards -->
+                <div class="lg:col-span-6 space-y-4 lg:pt-14">
+                    
+                    <!-- Contact Card 1: Official WhatsApp & Phone -->
+                    <div class="glass-card rounded-2xl p-6 border border-whatsapp/30 hover:border-whatsapp transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-whatsapp/20 text-whatsapp flex items-center justify-center text-2xl shrink-0">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-whatsapp">Priority WhatsApp &amp; Direct Call</span>
+                                <h3 class="font-display font-bold text-xl text-white mt-0.5">+91 93246 66369</h3>
+                                <p class="text-xs text-slate-400">Instant Consultation, Quotes &amp; Document Sharing</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20would%20like%20to%20discuss%20my%20visa%20%2F%20travel%20plans."
+                               target="_blank" rel="noopener noreferrer"
+                               class="px-4 py-2.5 rounded-xl bg-whatsapp hover:bg-whatsappdark text-obsidian font-display font-bold text-xs sm:text-sm flex items-center gap-1.5 transition-all">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="tel:+919324666369"
+                               class="px-3.5 py-2.5 rounded-xl bg-obsidian hover:bg-slatedark text-white border border-white/15 text-xs sm:text-sm font-semibold transition-all">
+                                <i class="fa-solid fa-phone"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Card 2: Official Email -->
+                    <div class="glass-card rounded-2xl p-6 border border-white/10 hover:border-cobalt/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-cobalt/20 text-blue-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-blue-400">Official Executive Desk Email</span>
+                                <h3 class="font-display font-bold text-lg sm:text-xl text-white mt-0.5 break-all">shubham@traversiq.com</h3>
+                                <p class="text-xs text-slate-400">For Corporate Inquiries, Dossiers &amp; Itineraries</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <a href="mailto:shubham@traversiq.com?subject=Travel%20%26%20Visa%20Inquiry%20-%20Traversiq%20Global"
+                               class="px-4 py-2.5 rounded-xl bg-cobalt hover:bg-blue-600 text-white font-display font-semibold text-xs sm:text-sm flex items-center gap-1.5 transition-all">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Send Email</span>
+                            </a>
+                            <button type="button" id="copy-email-btn" title="Copy Email Address"
+                                    class="px-3.5 py-2.5 rounded-xl bg-obsidian hover:bg-slatedark text-slate-200 border border-white/15 text-xs sm:text-sm transition-all">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Contact Card 3: Office Base & Service Coverage -->
+                    <div class="glass-card rounded-2xl p-6 border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-gold/15 text-gold flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-gold">Headquarters &amp; Coverage</span>
+                                <h3 class="font-display font-bold text-lg text-white mt-0.5">Panvel, Navi Mumbai - 410206</h3>
+                                <p class="text-xs text-slate-300 mt-0.5">Serving Clients in Panvel, Navi Mumbai &amp; Available <strong class="text-white">PAN India</strong></p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20am%20based%20in%20Panvel%20%2F%20Navi%20Mumbai%20and%20would%20like%20to%20connect."
+                           target="_blank" rel="noopener noreferrer"
+                           class="px-4 py-2.5 rounded-xl bg-obsidian hover:bg-slatedark text-slate-200 border border-white/15 text-xs font-semibold text-center transition-all shrink-0">
+                            Book Appointment
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         8. FOOTER
+    =========================================== -->
+    <footer class="bg-[#070C1D] border-t border-white/10 pt-14 pb-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-white/10">
+                
+                <!-- Brand Column -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-cobalt flex items-center justify-center">
+                            <svg class="w-6 h-6" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10H33L29.5 15H10.5L7 10Z" fill="#F8FAFC"/>
+                                <path d="M17.5 15H22.5V33L17.5 29.5V15Z" fill="#0B132B"/>
+                                <path d="M9 26L33 11L24 29L20.5 22.5L9 26Z" fill="#D4AF37"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="font-display font-extrabold text-xl tracking-wider text-white">TRAVERSIQ</span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest ml-1 px-1.5 py-0.5 rounded bg-cobalt/20 text-blue-400">Global</span>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-400 max-w-sm leading-relaxed">
+                        <strong class="text-slate-200">Intelligent Mobility. Seamless Journeys.</strong> Modern travel management, US F1/B1/B2 consular advisory, global tourist visas, worldwide flights, and curated tours.
+                    </p>
+                    <div class="flex items-center gap-3 text-xs text-slate-300 font-medium">
+                        <span class="px-2.5 py-1 rounded-lg bg-slatedark border border-white/10">traversiq.com</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slatedark border border-white/10">traversiq.in</span>
+                    </div>
+                </div>
+
+                <!-- Quick WhatsApp Links -->
+                <div class="md:col-span-4 space-y-2.5">
+                    <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-3">1-Click WhatsApp Desk</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm">
+                        <li><a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20need%20help%20with%20a%20US%20F1%20%2F%20B1-B2%20Visa." target="_blank" rel="noopener noreferrer" class="hover:text-whatsapp transition-colors">&rarr; US F1 &amp; B1/B2 Visa Coaching</a></li>
+                        <li><a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20need%20help%20with%20a%20Schengen%20%2F%20UAE%20%2F%20Global%20Tourist%20Visa." target="_blank" rel="noopener noreferrer" class="hover:text-whatsapp transition-colors">&rarr; Schengen, UAE &amp; Global Visas</a></li>
+                        <li><a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20want%20to%20book%20Flights%20%2F%20Hotels%20%2F%20Holiday%20Packages." target="_blank" rel="noopener noreferrer" class="hover:text-whatsapp transition-colors">&rarr; Flights, Hotels &amp; Tour Packages</a></li>
+                        <li><a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20need%20Passport%20Application%20%2F%20Renewal%20assistance." target="_blank" rel="noopener noreferrer" class="hover:text-whatsapp transition-colors">&rarr; Passport Application &amp; Renewal</a></li>
+                        <li><a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20am%20interested%20in%20the%20VIP%20Cinematic%20Photo%2FVideo%20Trip%20Add-On." target="_blank" rel="noopener noreferrer" class="text-goldlight hover:text-gold transition-colors">&rarr; Traversiq Studio VIP Media Add-On</a></li>
+                    </ul>
+                </div>
+
+                <!-- Direct Credentials -->
+                <div class="md:col-span-3 space-y-2.5 text-xs sm:text-sm">
+                    <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-3">Direct Contact</h4>
+                    <p class="text-white font-semibold">Shubham Madhavi</p>
+                    <p class="text-slate-400">Founder &amp; Principal Travel Consultant</p>
+                    <p class="pt-1"><a href="tel:+919324666369" class="text-whatsapp hover:underline font-semibold">+91 93246 66369</a></p>
+                    <p><a href="mailto:shubham@traversiq.com" class="text-blue-400 hover:underline">shubham@traversiq.com</a></p>
+                    <p class="text-slate-400 pt-1">Panvel, Navi Mumbai - 410206<br><span class="text-slate-300">Serving PAN India</span></p>
+                </div>
+            </div>
+
+            <!-- Copyright Row -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>&copy; <span id="current-year"></span> TRAVERSIQ Global (traversiq.com | traversiq.in). All Rights Reserved.</p>
+                <p>Founded by Shubham Madhavi • Panvel, Navi Mumbai</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         9. FLOATING DESKTOP WHATSAPP BUTTON & STICKY MOBILE BAR
+    =========================================== -->
+    <!-- Floating Desktop WhatsApp Trigger (Hidden on small mobile where sticky bottom bar is active) -->
+    <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20am%20visiting%20traversiq.com%20and%20would%20like%20to%20chat%20about%20your%20services."
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Chat on WhatsApp"
+       class="hidden md:flex fixed bottom-6 right-6 z-40 items-center gap-3 bg-whatsapp hover:bg-whatsappdark text-obsidian font-display font-extrabold px-5 py-3.5 rounded-full shadow-glow-whatsapp transition-all transform hover:scale-105">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="text-sm">WhatsApp Concierge</span>
+    </a>
+
+    <!-- Sticky Mobile Bottom Bar (Instant 1-Tap Conversion on Smartphones) -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-obsidian/95 backdrop-blur-md border-t border-white/15 p-3 flex items-center gap-2.5">
+        <a href="tel:+919324666369"
+           class="px-4 py-3 rounded-xl bg-slatedark text-white font-display font-bold text-xs border border-white/15 flex items-center justify-center gap-1.5 shrink-0">
+            <i class="fa-solid fa-phone text-blue-400"></i>
+            <span>Call</span>
+        </a>
+        <a href="https://wa.me/919324666369?text=Hi%20Shubham%20%28Traversiq%20Global%29%2C%20I%20visited%20traversiq.com%20and%20need%20assistance%20with%20Visas%20%2F%20Flights%20%2F%20Travel."
+           target="_blank" rel="noopener noreferrer"
+           class="flex-1 bg-whatsapp text-obsidian font-display font-extrabold text-sm py-3 px-4 rounded-xl shadow-glow-whatsapp flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Chat on WhatsApp (+91 93246 66369)</span>
+        </a>
+    </div>
+
+    <!-- ==========================================
+         INTERACTIVE JAVASCRIPT ENGINE
+    =========================================== -->
+    <script>
+        // Official WhatsApp Number Constant
+        const WHATSAPP_NUMBER = "919324666369";
+
+        // Current State for the 10-Second WhatsApp Inquiry Builder
+        let selectedService = "US F1 Student Visa";
+
+        // DOM Elements
+        const servicePills = document.querySelectorAll('.service-pill');
+        const destInput = document.getElementById('builder-destination');
+        const nameInput = document.getElementById('builder-name');
+        const notesInput = document.getElementById('builder-notes');
+        const destTags = document.querySelectorAll('.dest-tag');
+        const livePreview = document.getElementById('whatsapp-live-preview');
+        const launchBtn = document.getElementById('builder-whatsapp-launch');
+        const copyPreviewBtn = document.getElementById('copy-preview-btn');
+        const copyEmailBtn = document.getElementById('copy-email-btn');
+        const copyVcardBtn = document.getElementById('copy-vcard-btn');
+
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenuIcon.classList.remove('fa-bars');
+                mobileMenuIcon.classList.add('fa-xmark');
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.remove('fa-xmark');
+                mobileMenuIcon.classList.add('fa-bars');
+            }
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.remove('fa-xmark');
+                mobileMenuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Build and Synchronize Live WhatsApp Message & URL
+        function updateWhatsAppBuilder() {
+            const destVal = destInput.value.trim() || "Flexible / To be discussed";
+            const nameVal = nameInput.value.trim();
+            const notesVal = notesInput.value.trim();
+
+            let messageLines = [
+                "Hi Shubham (Traversiq Global),",
+                "",
+                "I would like to inquire about:",
+                `• Service: ${selectedService}`,
+                `• Destination / Timeline: ${destVal}`
+            ];
+
+            if (nameVal) {
+                messageLines.push(`• Name / City: ${nameVal}`);
+            }
+            if (notesVal) {
+                messageLines.push(`• Requirement: ${notesVal}`);
+            }
+
+            messageLines.push("");
+            messageLines.push("Please share the next steps and consultation details.");
+
+            const finalMessage = messageLines.join("\n");
+            livePreview.textContent = finalMessage;
+
+            // Construct URL-encoded WhatsApp link
+            const encodedText = encodeURIComponent(finalMessage);
+            launchBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`;
+        }
+
+        // Service Pill Click Handler
+        servicePills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                servicePills.forEach(p => {
+                    p.classList.remove('service-chip-active');
+                    p.classList.add('text-slate-300');
+                });
+                pill.classList.add('service-chip-active');
+                pill.classList.remove('text-slate-300');
+                selectedService = pill.getAttribute('data-service');
+                updateWhatsAppBuilder();
+            });
+        });
+
+        // Helper function called from Service Cards ("Customize Brief")
+        window.selectInBuilder = function(serviceName) {
+            selectedService = serviceName;
+            servicePills.forEach(p => {
+                if (p.getAttribute('data-service') === serviceName) {
+                    p.classList.add('service-chip-active');
+                    p.classList.remove('text-slate-300');
+                } else {
+                    p.classList.remove('service-chip-active');
+                    p.classList.add('text-slate-300');
+                }
+            });
+            updateWhatsAppBuilder();
+            const builderSection = document.getElementById('inquiry-builder');
+            if (builderSection) {
+                builderSection.scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => destInput.focus(), 600);
+            }
+        };
+
+        // Quick Destination Tags Handler
+        destTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                destInput.value = tag.getAttribute('data-dest');
+                updateWhatsAppBuilder();
+            });
+        });
+
+        // Live Input Listeners
+        destInput.addEventListener('input', updateWhatsAppBuilder);
+        nameInput.addEventListener('input', updateWhatsAppBuilder);
+        notesInput.addEventListener('input', updateWhatsAppBuilder);
+
+        // Clipboard Copy Helper (Uses document.execCommand('copy') for iframe compatibility)
+        function copyTextToClipboard(text, title, subtitle) {
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = text;
+            tempTextArea.style.position = 'fixed';
+            tempTextArea.style.left = '-9999px';
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            try {
+                document.execCommand('copy');
+                showToast(title, subtitle);
+            } catch (err) {
+                showToast("Copy Action", "Please use the WhatsApp button directly.");
+            }
+            document.body.removeChild(tempTextArea);
+        }
+
+        // Toast Notification Display
+        let toastTimeout;
+        function showToast(title, subtitle) {
+            const toast = document.getElementById('toast-notification');
+            document.getElementById('toast-title').textContent = title;
+            document.getElementById('toast-desc').textContent = subtitle;
+            toast.classList.remove('translate-x-full', 'opacity-0');
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-x-full', 'opacity-0');
+            }, 3200);
+        }
+
+        // Copy Buttons Event Listeners
+        copyPreviewBtn.addEventListener('click', () => {
+            copyTextToClipboard(
+                livePreview.textContent,
+                "WhatsApp Brief Copied!",
+                "Ready to paste in WhatsApp (+91 93246 66369)"
+            );
+        });
+
+        copyEmailBtn.addEventListener('click', () => {
+            copyTextToClipboard(
+                "shubham@traversiq.com",
+                "Official Email Copied!",
+                "shubham@traversiq.com"
+            );
+        });
+
+        copyVcardBtn.addEventListener('click', () => {
+            const cardSummary = `TRAVERSIQ GLOBAL (Intelligent Mobility. Seamless Journeys.)\nFounder: Shubham Madhavi\nWhatsApp / Phone: +91 93246 66369\nEmail: shubham@traversiq.com\nWeb: https://traversiq.com | https://traversiq.in\nOffice: Panvel, Navi Mumbai - 410206 (Serving PAN India)`;
+            copyTextToClipboard(
+                cardSummary,
+                "Business Card Details Copied!",
+                "Shubham Madhavi • Traversiq Global"
+            );
+        });
+
+        // Set Current Year in Footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Initialize Builder on Load
+        window.onload = function() {
+            updateWhatsAppBuilder();
+        };
+    </script>
+</body>
+</html>
