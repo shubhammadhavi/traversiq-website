@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) - GA4 (Stream ID: 16205322620) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4SVKHEMNLL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4SVKHEMNLL');
+    </script>
+
     <title>TRAVERSIQ Global | Visas, Flights, Holidays & Passport Desk — Panvel, Navi Mumbai</title>
     <meta name="description" content="Direct US F1 & B1/B2 visa preparation, Schengen & global tourist visas, flight ticketing, custom holidays, and passport assistance in Panvel, Navi Mumbai (410206).">
 
@@ -1143,6 +1154,22 @@
 
             probeNextImage(1);
         })();
+
+        // =====================================================================
+        // GA4 LEAD TRACKING (WhatsApp & Phone Clicks)
+        // =====================================================================
+        document.querySelectorAll('a[href*="wa.me"], a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                if (typeof gtag === 'function') {
+                    const isWhatsApp = this.href.includes('wa.me');
+                    gtag('event', isWhatsApp ? 'whatsapp_lead_click' : 'phone_call_click', {
+                        'service_selected': currentService,
+                        'destination_input': destInput.value.trim() || 'Not specified',
+                        'button_id': this.id || 'header_or_sticky_cta'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
