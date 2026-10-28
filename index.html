@@ -183,18 +183,18 @@
                             <span class="font-serif font-bold text-lg sm:text-xl text-navy tracking-tight">TRAVERSIQ GLOBAL</span>
                         </div>
                         <p class="text-[11px] sm:text-xs text-slate-600 font-medium">
-                            Visas • Flights • Holidays • Passports
+                            World Tours • Custom Holidays • Visas • Passports
                         </p>
                     </div>
                 </a>
 
                 <!-- Desktop Navigation Links -->
                 <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
-                    <a href="#home" data-nav="home" onclick="openPage('home'); return false;" class="nav-tab text-navy border-b-2 border-gold pb-1 transition-colors">Home</a>
-                    <a href="#passport-services" data-nav="passport" onclick="openPage('passport'); return false;" class="nav-tab hover:text-navy pb-1 transition-colors">Passport Desk</a>
-                    <a href="#us-visa" data-nav="us-visa" onclick="openPage('us-visa'); return false;" class="nav-tab hover:text-navy pb-1 transition-colors">US F1 / B1-B2 Prep</a>
+                    <a href="#home" data-nav="home" onclick="openPage('home'); return false;" class="nav-tab text-navy border-b-2 border-gold pb-1 transition-colors">Home &amp; Tours</a>
+                    <a href="#flights-holidays" data-nav="flights" onclick="openPage('flights'); return false;" class="nav-tab hover:text-navy pb-1 transition-colors">Holidays &amp; Flights</a>
                     <a href="#global-visas" data-nav="global-visas" onclick="openPage('global-visas'); return false;" class="nav-tab hover:text-navy pb-1 transition-colors">Global Visas</a>
-                    <a href="#flights-holidays" data-nav="flights" onclick="openPage('flights'); return false;" class="nav-tab hover:text-navy pb-1 transition-colors">Flights &amp; Tours</a>
+                    <a href="#us-visa" data-nav="us-visa" onclick="openPage('us-visa'); return false;" class="nav-tab hover:text-navy pb-1 transition-colors">US F1 / B1-B2 Prep</a>
+                    <a href="#passport-services" data-nav="passport" onclick="openPage('passport'); return false;" class="nav-tab hover:text-navy pb-1 transition-colors">Passport Desk</a>
                     <a href="#founder" onclick="scrollToFounder(); return false;" class="hover:text-navy pb-1 transition-colors">About</a>
                 </nav>
 
@@ -224,17 +224,17 @@
         <div class="bg-navy text-white border-t border-gold/40">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between gap-4 overflow-x-auto no-scrollbar text-xs">
                 <div class="flex items-center gap-2 shrink-0">
-                    <span class="text-amber-300 font-bold uppercase tracking-wider text-[11px]">Dedicated Desks:</span>
+                    <span class="text-amber-300 font-bold uppercase tracking-wider text-[11px]">Explore Desks:</span>
                 </div>
                 <div class="flex items-center gap-4 sm:gap-6 shrink-0">
-                    <a href="#passport-services" data-bar="passport" onclick="openPage('passport'); return false;" class="bar-tab hover:text-amber-300 transition-colors flex items-center gap-1.5 font-medium">
-                        <span>🇮🇳</span>
-                        <span>Passport &amp; Tatkaal Desk</span>
+                    <a href="#curated-tours" onclick="openPage('home', undefined, true); document.getElementById('curated-tours').scrollIntoView({behavior:'smooth'}); return false;" class="hover:text-amber-300 transition-colors flex items-center gap-1.5 font-semibold text-amber-200">
+                        <span>🌍</span>
+                        <span>10 Curated Tour Packages</span>
                     </a>
                     <span class="text-slate-600">|</span>
-                    <a href="#us-visa" data-bar="us-visa" onclick="openPage('us-visa'); return false;" class="bar-tab hover:text-amber-300 transition-colors flex items-center gap-1.5 font-medium">
-                        <span>🇺🇸</span>
-                        <span>US Visa (F1 / B1-B2)</span>
+                    <a href="#flights-holidays" data-bar="flights" onclick="openPage('flights'); return false;" class="bar-tab hover:text-amber-300 transition-colors flex items-center gap-1.5 font-medium">
+                        <span>✈️</span>
+                        <span>Flights &amp; Photo Add-On</span>
                     </a>
                     <span class="text-slate-600">|</span>
                     <a href="#global-visas" data-bar="global-visas" onclick="openPage('global-visas'); return false;" class="bar-tab hover:text-amber-300 transition-colors flex items-center gap-1.5 font-medium">
@@ -242,9 +242,14 @@
                         <span>Schengen, UAE &amp; Global Visas</span>
                     </a>
                     <span class="text-slate-600">|</span>
-                    <a href="#flights-holidays" data-bar="flights" onclick="openPage('flights'); return false;" class="bar-tab hover:text-amber-300 transition-colors flex items-center gap-1.5 font-medium">
-                        <span>✈️</span>
-                        <span>Flights, Holidays &amp; Photo Add-On</span>
+                    <a href="#us-visa" data-bar="us-visa" onclick="openPage('us-visa'); return false;" class="bar-tab hover:text-amber-300 transition-colors flex items-center gap-1.5 font-medium">
+                        <span>🇺🇸</span>
+                        <span>US Visa (F1 / B1-B2)</span>
+                    </a>
+                    <span class="text-slate-600">|</span>
+                    <a href="#passport-services" data-bar="passport" onclick="openPage('passport'); return false;" class="bar-tab hover:text-amber-300 transition-colors flex items-center gap-1.5 font-medium">
+                        <span>🇮🇳</span>
+                        <span>Passport &amp; Tatkaal Desk</span>
                     </a>
                 </div>
             </div>
@@ -252,11 +257,11 @@
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 pt-2 pb-5 space-y-2 shadow-lg">
-            <a href="#home" onclick="openPage('home'); return false;" class="mobile-link block py-2.5 border-b border-slate-100 text-sm font-bold text-navy">Home</a>
-            <a href="#passport-services" onclick="openPage('passport'); return false;" class="mobile-link block py-2.5 border-b border-slate-100 text-sm font-semibold text-navy">🇮🇳 Indian Passport &amp; Tatkaal Desk</a>
-            <a href="#us-visa" onclick="openPage('us-visa'); return false;" class="mobile-link block py-2.5 border-b border-slate-100 text-sm font-semibold text-navy">🇺🇸 US F1 &amp; B1/B2 Interview Prep</a>
+            <a href="#home" onclick="openPage('home'); return false;" class="mobile-link block py-2.5 border-b border-slate-100 text-sm font-bold text-navy">🌍 Home &amp; Curated Tour Packages</a>
+            <a href="#flights-holidays" onclick="openPage('flights'); return false;" class="mobile-link block py-2.5 border-b border-slate-100 text-sm font-semibold text-navy">✈️ Flights, Custom Tours &amp; Photography Add-On</a>
             <a href="#global-visas" onclick="openPage('global-visas'); return false;" class="mobile-link block py-2.5 border-b border-slate-100 text-sm font-semibold text-navy">🇪🇺 Schengen, UAE &amp; Global Tourist Visas</a>
-            <a href="#flights-holidays" onclick="openPage('flights'); return false;" class="mobile-link block py-2.5 border-b border-slate-100 text-sm font-semibold text-navy">✈️ Flights, Family Tours &amp; Photography Add-On</a>
+            <a href="#us-visa" onclick="openPage('us-visa'); return false;" class="mobile-link block py-2.5 border-b border-slate-100 text-sm font-semibold text-navy">🇺🇸 US F1 &amp; B1/B2 Interview Prep</a>
+            <a href="#passport-services" onclick="openPage('passport'); return false;" class="mobile-link block py-2.5 border-b border-slate-100 text-sm font-semibold text-navy">🇮🇳 Indian Passport &amp; Tatkaal Desk</a>
             <a href="#founder" onclick="scrollToFounder(); return false;" class="mobile-link block py-2.5 text-sm font-semibold text-navy">About &amp; Office Address</a>
         </div>
     </header>
@@ -272,7 +277,7 @@
                 <div class="lg:col-span-7 lg:sticky lg:top-32">
 
                     <!-- =====================================================
-                         HERO 1: HOME HUB (DEFAULT)
+                         HERO 1: HOME HUB (TOURISM-FIRST + FULL TRAVEL DESK)
                     ====================================================== -->
                     <div data-page-hero="home" class="space-y-6">
                         <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-md bg-goldLight border border-gold/50 text-navy text-xs font-semibold">
@@ -280,64 +285,69 @@
                         </div>
 
                         <h1 class="font-serif text-3xl sm:text-5xl text-navy font-bold leading-[1.18]">
-                            Passports, Flights, Holidays, and Global Visas—<span class="text-crimson italic font-normal">Handled Directly from Start to Finish.</span>
+                            Curated World Tours, Custom Holidays &amp; Expert Visa Desk—<span class="text-crimson italic font-normal">Handled Directly from Start to Finish.</span>
                         </h1>
 
                         <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
-                            At <strong>Traversiq Global</strong> in Taloja, Panvel, you work directly with <strong>Shubham Madhavi</strong>—whether you need a local Indian passport or Tatkaal appointment, flight tickets and a family holiday, a Schengen or Dubai tourist visa, or 1-on-1 US visa preparation.
+                            At <strong>Traversiq Global</strong> in Taloja, Panvel, we plan and execute end-to-end international and domestic holidays—complete with flights, 4-star stays, private transfers, and in-house visa clearance—alongside our dedicated desks for US F1/B1-B2 coaching and Indian Passports.
                         </p>
 
-                        <!-- Quick-Select Service Pills (Open Dedicated Page Directly) -->
+                        <!-- Quick-Select Tour & Service Pills -->
                         <div class="pt-1">
                             <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2.5">
-                                Click a service desk to open its dedicated page:
+                                Click a tour corridor or service desk to start:
                             </p>
                             <div class="flex flex-wrap gap-2">
-                                <button type="button" onclick="openPage('passport')"
+                                <button type="button" onclick="prefillBuilder('Flights & Custom Holiday Package', 'Thailand (Bangkok & Pattaya / Phuket) — 5N/6D Tour')"
                                         class="px-3.5 py-2 rounded-lg bg-white hover:bg-navy hover:text-white border border-slate-300 text-xs font-semibold text-slate-800 shadow-sm transition-colors flex items-center gap-2">
-                                    <span class="text-base">🇮🇳</span>
-                                    <span>Passport / Tatkaal Desk</span>
+                                    <span class="text-base">🇹🇭</span>
+                                    <span>Thailand Tours</span>
+                                </button>
+                                <button type="button" onclick="prefillBuilder('Flights & Custom Holiday Package', 'Dubai & Abu Dhabi — 5N/6D Family Tour + Visa')"
+                                        class="px-3.5 py-2 rounded-lg bg-white hover:bg-navy hover:text-white border border-slate-300 text-xs font-semibold text-slate-800 shadow-sm transition-colors flex items-center gap-2">
+                                    <span class="text-base">🇦🇪</span>
+                                    <span>Dubai Holidays</span>
+                                </button>
+                                <button type="button" onclick="prefillBuilder('Flights & Custom Holiday Package', 'Bali Villa & Beach Escape — 6N/7D Tour')"
+                                        class="px-3.5 py-2 rounded-lg bg-white hover:bg-navy hover:text-white border border-slate-300 text-xs font-semibold text-slate-800 shadow-sm transition-colors flex items-center gap-2">
+                                    <span class="text-base">🇮🇩</span>
+                                    <span>Bali Getaways</span>
+                                </button>
+                                <button type="button" onclick="prefillBuilder('Flights & Custom Holiday Package', 'South Africa Kruger Safari & Cape Town — 7N/8D Tour')"
+                                        class="px-3.5 py-2 rounded-lg bg-white hover:bg-navy hover:text-white border border-slate-300 text-xs font-semibold text-slate-800 shadow-sm transition-colors flex items-center gap-2">
+                                    <span class="text-base">🇿🇦</span>
+                                    <span>South Africa Safari</span>
+                                </button>
+                                <button type="button" onclick="openPage('global-visas')"
+                                        class="px-3.5 py-2 rounded-lg bg-white hover:bg-navy hover:text-white border border-slate-300 text-xs font-semibold text-slate-800 shadow-sm transition-colors flex items-center gap-2">
+                                    <span class="text-base">🇪🇺</span>
+                                    <span>Schengen &amp; Global Visas</span>
                                 </button>
                                 <button type="button" onclick="openPage('us-visa')"
                                         class="px-3.5 py-2 rounded-lg bg-white hover:bg-navy hover:text-white border border-slate-300 text-xs font-semibold text-slate-800 shadow-sm transition-colors flex items-center gap-2">
                                     <span class="text-base">🇺🇸</span>
-                                    <span>USA Visa (F1 / B1-B2)</span>
+                                    <span>US Visa (F1 / B1-B2)</span>
                                 </button>
-                                <button type="button" onclick="openPage('global-visas', 'Schengen Europe (France, Swiss, Italy)')"
+                                <button type="button" onclick="openPage('passport')"
                                         class="px-3.5 py-2 rounded-lg bg-white hover:bg-navy hover:text-white border border-slate-300 text-xs font-semibold text-slate-800 shadow-sm transition-colors flex items-center gap-2">
-                                    <span class="text-base">🇪🇺</span>
-                                    <span>Schengen Europe</span>
-                                </button>
-                                <button type="button" onclick="openPage('global-visas', 'Dubai / UAE Tourist Visa & Package')"
-                                        class="px-3.5 py-2 rounded-lg bg-white hover:bg-navy hover:text-white border border-slate-300 text-xs font-semibold text-slate-800 shadow-sm transition-colors flex items-center gap-2">
-                                    <span class="text-base">🇦🇪</span>
-                                    <span>Dubai / UAE</span>
-                                </button>
-                                <button type="button" onclick="openPage('global-visas', 'UK / Australia / Canada Visitor Visa')"
-                                        class="px-3.5 py-2 rounded-lg bg-white hover:bg-navy hover:text-white border border-slate-300 text-xs font-semibold text-slate-800 shadow-sm transition-colors flex items-center gap-2">
-                                    <span class="text-base">🇬🇧</span>
-                                    <span>UK / Australia / Japan</span>
-                                </button>
-                                <button type="button" onclick="openPage('flights')"
-                                        class="px-3.5 py-2 rounded-lg bg-white hover:bg-navy hover:text-white border border-slate-300 text-xs font-semibold text-slate-800 shadow-sm transition-colors flex items-center gap-2">
-                                    <span class="text-base">✈️</span>
-                                    <span>Flights &amp; Family Tours</span>
+                                    <span class="text-base">🇮🇳</span>
+                                    <span>Passport / Tatkaal Desk</span>
                                 </button>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-2">
                             <div class="bg-white p-4 rounded-lg border border-slate-200 border-t-4 border-t-navy shadow-sm">
-                                <p class="font-bold text-sm text-navy">1. 1-on-1 File Handling</p>
-                                <p class="text-xs text-slate-600 mt-1">Every passport form, visa application, and travel itinerary is prepared and reviewed directly with you.</p>
+                                <p class="font-bold text-sm text-navy">1. End-to-End Packages</p>
+                                <p class="text-xs text-slate-600 mt-1">Flights, vetted 4-star stays, private airport/sightseeing transfers, and attraction passes under one roof.</p>
                             </div>
                             <div class="bg-white p-4 rounded-lg border border-slate-200 border-t-4 border-t-gold shadow-sm">
-                                <p class="font-bold text-sm text-navy">2. Pre-Application Audit</p>
-                                <p class="text-xs text-slate-600 mt-1">We verify your documents and eligibility before you pay government or embassy fees.</p>
+                                <p class="font-bold text-sm text-navy">2. In-House Visa Clearance</p>
+                                <p class="text-xs text-slate-600 mt-1">Unlike standard tour operators, your tourist visas, cover letters, and embassy filings are handled directly in-house.</p>
                             </div>
                             <div class="bg-white p-4 rounded-lg border border-slate-200 border-t-4 border-t-crimson shadow-sm">
-                                <p class="font-bold text-sm text-navy">3. Taloja, Panvel &amp; Online</p>
-                                <p class="text-xs text-slate-600 mt-1">Visit our Taloja, Panvel desk or complete your documentation digitally over WhatsApp and Zoom.</p>
+                                <p class="font-bold text-sm text-navy">3. Transparent Pricing</p>
+                                <p class="text-xs text-slate-600 mt-1">Embassy/government fees at actuals with clear, upfront service charges and custom-paced itineraries.</p>
                             </div>
                         </div>
                     </div>
@@ -795,20 +805,378 @@
     </section>
 
     <!-- =====================================================================
-         3A. HOME PAGE VIEW: 4 DEDICATED SERVICE DESK GATEWAY CARDS
+         3A. HOME PAGE VIEW:
+             PART 1 — 10 CURATED INTERNATIONAL & DOMESTIC TOUR PACKAGES (MAIN ATTRACTION)
+             PART 2 — 4 DEDICATED SERVICE DESKS + TRANSPARENT RATE CARD
     ====================================================================== -->
-    <section id="desks" data-page-section="home" class="py-14 md:py-20 bg-white border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="desks" data-page-section="home" class="py-14 md:py-20 bg-white border-b border-slate-200 space-y-20">
+
+        <!-- PART 1: 10 CURATED TOUR PACKAGES -->
+        <div id="curated-tours" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
                 <div>
-                    <span class="text-xs font-bold uppercase tracking-wider text-crimson">Choose Your Service Desk</span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-crimson">End-to-End Holidays • Flights + Stays + Transfers + Visas</span>
                     <h2 class="font-serif text-2xl sm:text-4xl font-bold text-navy mt-1">
-                        Dedicated Pages for Every Travel &amp; Document Need
+                        Curated International &amp; Domestic Tour Packages
                     </h2>
                 </div>
                 <p class="text-sm text-slate-600 max-w-md">
-                    Click on any service desk below to open its dedicated page with checklists, workflows, and direct WhatsApp consultation.
+                    Every tour is customized around your dates from Mumbai/Navi Mumbai with handpicked hotels, private airport transfers, and in-house visa processing.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Tour 1: Thailand (Bangkok & Pattaya / Phuket & Krabi) -->
+                <div class="bg-ivory rounded-lg border border-slate-200 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="relative h-48 bg-slate-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80"
+                                 alt="Thailand Bangkok Pattaya Phuket Tour"
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/800x500/0B1F3A/FAF8F3?text=Thailand+Tours'">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-navy/90 text-white text-[11px] font-bold">
+                                🇹🇭 5 Nights / 6 Days
+                            </span>
+                            <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-goldLight text-navy text-[11px] font-bold border border-gold">
+                                Visa-Free / TDAC Included
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-lg text-navy">Thailand: Bangkok &amp; Pattaya (or Phuket &amp; Krabi)</h3>
+                            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                                Direct Mumbai–Bangkok/Phuket flights, 4-star stays with daily breakfast, private airport transfers, and island excursions.
+                            </p>
+                            <ul class="mt-3 space-y-1 text-xs text-slate-700 border-t border-slate-200 pt-3">
+                                <li>• Coral Island by speedboat &amp; Chao Phraya dinner cruise</li>
+                                <li>• Phi Phi Island &amp; 4-Island tour option (Phuket/Krabi)</li>
+                                <li>• Complete flights, hotels &amp; private transfers</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <button type="button" onclick="prefillBuilder('Flights & Custom Holiday Package', 'Thailand (Bangkok & Pattaya / Phuket) — 5N/6D Complete Package')"
+                                class="w-full py-2.5 px-3 rounded-lg bg-navy hover:bg-navyLight text-white text-center text-xs font-bold transition-colors">
+                            Get Thailand Package Quote &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tour 2: Dubai & Abu Dhabi -->
+                <div class="bg-ivory rounded-lg border border-slate-200 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="relative h-48 bg-slate-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80"
+                                 alt="Dubai and Abu Dhabi Family Tour"
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/800x500/0B1F3A/FAF8F3?text=Dubai+UAE+Tour'">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-navy/90 text-white text-[11px] font-bold">
+                                🇦🇪 4N / 5D or 5N / 6D
+                            </span>
+                            <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-goldLight text-navy text-[11px] font-bold border border-gold">
+                                UAE e-Visa Handled In-House
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-lg text-navy">Dubai &amp; Abu Dhabi Family Escape</h3>
+                            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                                Complete UAE holiday with return flights, central 4-star hotel, desert safari, Marina yacht cruise, and Abu Dhabi city tour.
+                            </p>
+                            <ul class="mt-3 space-y-1 text-xs text-slate-700 border-t border-slate-200 pt-3">
+                                <li>• Burj Khalifa 124th Floor + Dubai Mall Fountain show</li>
+                                <li>• Desert Safari with dune bashing &amp; BBQ dinner</li>
+                                <li>• Abu Dhabi BAPS Hindu Mandir &amp; Grand Mosque tour</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <button type="button" onclick="prefillBuilder('Flights & Custom Holiday Package', 'Dubai & Abu Dhabi — 5N/6D Complete Tour + UAE Visa')"
+                                class="w-full py-2.5 px-3 rounded-lg bg-navy hover:bg-navyLight text-white text-center text-xs font-bold transition-colors">
+                            Get Dubai Package Quote &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tour 3: Bali, Indonesia -->
+                <div class="bg-ivory rounded-lg border border-slate-200 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="relative h-48 bg-slate-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80"
+                                 alt="Bali Villa and Beach Holiday"
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/800x500/0B1F3A/FAF8F3?text=Bali+Tour'">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-navy/90 text-white text-[11px] font-bold">
+                                🇮🇩 5N / 6D or 6N / 7D
+                            </span>
+                            <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-goldLight text-navy text-[11px] font-bold border border-gold">
+                                e-VOA &amp; Private Car Included
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-lg text-navy">Bali: Ubud Pool Villa &amp; Beach Resort</h3>
+                            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                                Designed for couples and families—combining Ubud rainforest villas with Seminyak or Nusa Dua beachfront stays.
+                            </p>
+                            <ul class="mt-3 space-y-1 text-xs text-slate-700 border-t border-slate-200 pt-3">
+                                <li>• Nusa Penida West island tour by fast boat</li>
+                                <li>• Kintamani volcano view, Ubud rice terraces &amp; swing</li>
+                                <li>• Uluwatu Temple sunset &amp; dedicated private driver</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <button type="button" onclick="prefillBuilder('Flights & Custom Holiday Package', 'Bali Ubud & Seminyak — 6N/7D Complete Package')"
+                                class="w-full py-2.5 px-3 rounded-lg bg-navy hover:bg-navyLight text-white text-center text-xs font-bold transition-colors">
+                            Get Bali Package Quote &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tour 4: South Africa Safari & Cape Town -->
+                <div class="bg-ivory rounded-lg border border-slate-200 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="relative h-48 bg-slate-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80"
+                                 alt="South Africa Wildlife Safari and Cape Town Tour"
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/800x500/0B1F3A/FAF8F3?text=South+Africa+Safari'">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-crimson text-white text-[11px] font-bold">
+                                🇿🇦 7N / 8D Signature Safari
+                            </span>
+                            <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-goldLight text-navy text-[11px] font-bold border border-gold">
+                                SA Visa + Game Drives Included
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-lg text-navy">South Africa: Big-5 Safari, Sun City &amp; Cape Town</h3>
+                            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                                Open-top 4x4 Big-5 wildlife game drives in Kruger / Pilanesberg paired with Cape Town, Table Mountain, and Cape Peninsula.
+                            </p>
+                            <ul class="mt-3 space-y-1 text-xs text-slate-700 border-t border-slate-200 pt-3">
+                                <li>• 4x4 Big-5 Safari lodge stay with ranger game drives</li>
+                                <li>• Cape Town Table Mountain, Boulders Penguins &amp; Cape Point</li>
+                                <li>• Complete South Africa visa filing &amp; internal flights</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <button type="button" onclick="prefillBuilder('Flights & Custom Holiday Package', 'South Africa Big-5 Safari & Cape Town — 7N/8D Package')"
+                                class="w-full py-2.5 px-3 rounded-lg bg-navy hover:bg-navyLight text-white text-center text-xs font-bold transition-colors">
+                            Get South Africa Safari Quote &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tour 5: Vietnam (Hanoi, Ha Long Bay & Da Nang) -->
+                <div class="bg-ivory rounded-lg border border-slate-200 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="relative h-48 bg-slate-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80"
+                                 alt="Vietnam Ha Long Bay and Da Nang Tour"
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/800x500/0B1F3A/FAF8F3?text=Vietnam+Tour'">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-navy/90 text-white text-[11px] font-bold">
+                                🇻🇳 6 Nights / 7 Days
+                            </span>
+                            <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-goldLight text-navy text-[11px] font-bold border border-gold">
+                                Vietnam e-Visa Included
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-lg text-navy">Vietnam: Hanoi, Ha Long Bay Cruise &amp; Da Nang</h3>
+                            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                                Scenic limestone karst cruise in Ha Long Bay, Hoi An ancient lantern town, and Ba Na Hills Golden Bridge.
+                            </p>
+                            <ul class="mt-3 space-y-1 text-xs text-slate-700 border-t border-slate-200 pt-3">
+                                <li>• Overnight luxury cruise on Ha Long Bay (all meals)</li>
+                                <li>• Ba Na Hills cable car &amp; Golden Hands Bridge in Da Nang</li>
+                                <li>• International + domestic Vietnam flights &amp; e-Visa</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <button type="button" onclick="prefillBuilder('Flights & Custom Holiday Package', 'Vietnam (Hanoi, Ha Long Bay & Da Nang) — 6N/7D Package')"
+                                class="w-full py-2.5 px-3 rounded-lg bg-navy hover:bg-navyLight text-white text-center text-xs font-bold transition-colors">
+                            Get Vietnam Package Quote &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tour 6: Singapore & Malaysia Twin-City -->
+                <div class="bg-ivory rounded-lg border border-slate-200 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="relative h-48 bg-slate-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80"
+                                 alt="Singapore and Malaysia Family Holiday"
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/800x500/0B1F3A/FAF8F3?text=Singapore+Malaysia'">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-navy/90 text-white text-[11px] font-bold">
+                                🇸🇬 🇲🇾 5N / 6D or 6N / 7D
+                            </span>
+                            <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-goldLight text-navy text-[11px] font-bold border border-gold">
+                                Singapore Visa + MDAC Handled
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-lg text-navy">Singapore &amp; Malaysia Twin-Country Tour</h3>
+                            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                                Ideal family vacation covering Singapore's theme parks and gardens paired with Kuala Lumpur and Genting Highlands.
+                            </p>
+                            <ul class="mt-3 space-y-1 text-xs text-slate-700 border-t border-slate-200 pt-3">
+                                <li>• Universal Studios, Sentosa Island &amp; Gardens by the Bay</li>
+                                <li>• Kuala Lumpur Petronas Twin Towers &amp; Batu Caves</li>
+                                <li>• Singapore tourist visa filing &amp; cross-border transfers</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <button type="button" onclick="prefillBuilder('Flights & Custom Holiday Package', 'Singapore & Malaysia Family Tour — 6N/7D Package')"
+                                class="w-full py-2.5 px-3 rounded-lg bg-navy hover:bg-navyLight text-white text-center text-xs font-bold transition-colors">
+                            Get Singapore-Malaysia Quote &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tour 7: Swiss-Paris Schengen Classic -->
+                <div class="bg-ivory rounded-lg border border-slate-200 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="relative h-48 bg-slate-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=800&q=80"
+                                 alt="Switzerland and Paris Schengen Europe Tour"
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/800x500/0B1F3A/FAF8F3?text=Swiss+Paris+Europe'">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-navy/90 text-white text-[11px] font-bold">
+                                🇪🇺 7N / 8D or 9N / 10D
+                            </span>
+                            <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-goldLight text-navy text-[11px] font-bold border border-gold">
+                                Full Schengen Visa File Included
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-lg text-navy">Swiss–Paris European Classic (Optional Italy)</h3>
+                            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                                Paris and the Swiss Alps planned with scenic rail passes, central hotels, and full Schengen VFS visa documentation.
+                            </p>
+                            <ul class="mt-3 space-y-1 text-xs text-slate-700 border-t border-slate-200 pt-3">
+                                <li>• Paris Eiffel Tower, Seine Cruise &amp; Disneyland option</li>
+                                <li>• Mt. Titlis / Jungfraujoch, Lucerne &amp; Interlaken Swiss Pass</li>
+                                <li>• Schengen cover letter, insurance &amp; VFS slot included</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <button type="button" onclick="prefillBuilder('Flights & Custom Holiday Package', 'Swiss-Paris Europe Tour — 7N/8D + Schengen Visa')"
+                                class="w-full py-2.5 px-3 rounded-lg bg-navy hover:bg-navyLight text-white text-center text-xs font-bold transition-colors">
+                            Get Europe Package Quote &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tour 8: Japan (Tokyo, Mt. Fuji, Kyoto & Osaka) -->
+                <div class="bg-ivory rounded-lg border border-slate-200 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="relative h-48 bg-slate-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80"
+                                 alt="Japan Tokyo Mt Fuji Kyoto Tour"
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/800x500/0B1F3A/FAF8F3?text=Japan+Tour'">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-navy/90 text-white text-[11px] font-bold">
+                                🇯🇵 7 Nights / 8 Days
+                            </span>
+                            <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-goldLight text-navy text-[11px] font-bold border border-gold">
+                                Japan Visa &amp; JR Shinkansen
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-lg text-navy">Japan Golden Route: Tokyo, Mt. Fuji, Kyoto &amp; Osaka</h3>
+                            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                                Curated Japan itinerary with bullet train transfers, English-guided day tours, and complete Japan consulate visa filing.
+                            </p>
+                            <ul class="mt-3 space-y-1 text-xs text-slate-700 border-t border-slate-200 pt-3">
+                                <li>• Tokyo Shibuya Sky, Asakusa &amp; Mt. Fuji 5th Station</li>
+                                <li>• Shinkansen bullet train to Kyoto Bamboo Grove &amp; Osaka</li>
+                                <li>• Complete Schedule of Stay &amp; Japan Visa documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <button type="button" onclick="prefillBuilder('Flights & Custom Holiday Package', 'Japan (Tokyo, Mt. Fuji, Kyoto & Osaka) — 7N/8D Package')"
+                                class="w-full py-2.5 px-3 rounded-lg bg-navy hover:bg-navyLight text-white text-center text-xs font-bold transition-colors">
+                            Get Japan Package Quote &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tour 9: Kashmir OR Kerala / Andaman Domestic Escapes -->
+                <div class="bg-ivory rounded-lg border border-slate-200 overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="relative h-48 bg-slate-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=800&q=80"
+                                 alt="Kashmir Dal Lake Gulmarg and Kerala Domestic Tours"
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://placehold.co/800x500/0B1F3A/FAF8F3?text=Kashmir+%26+Kerala+Tours'">
+                            <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-navy/90 text-white text-[11px] font-bold">
+                                🇮🇳 5 Nights / 6 Days (Domestic)
+                            </span>
+                            <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-goldLight text-navy text-[11px] font-bold border border-gold">
+                                Photo Add-On Available
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-lg text-navy">Kashmir, Kerala &amp; Andaman Family Holidays</h3>
+                            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+                                No passport required—private family tours with return Mumbai flights, verified resorts/houseboats, and dedicated SUV/cab.
+                            </p>
+                            <ul class="mt-3 space-y-1 text-xs text-slate-700 border-t border-slate-200 pt-3">
+                                <li>• <strong>Kashmir:</strong> Srinagar Dal Lake Houseboat, Gulmarg &amp; Pahalgam</li>
+                                <li>• <strong>Kerala / Andaman:</strong> Munnar–Alleppey OR Havelock Island</li>
+                                <li>• Optional Travel Photography &amp; Video Add-On available</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <button type="button" onclick="prefillBuilder('Flights & Custom Holiday Package', 'Domestic Family Tour (Kashmir / Kerala / Andaman) — 5N/6D')"
+                                class="w-full py-2.5 px-3 rounded-lg bg-navy hover:bg-navyLight text-white text-center text-xs font-bold transition-colors">
+                            Get Domestic Tour Quote &rarr;
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- US East Coast Featured Banner Card (10th Corridor) -->
+            <div class="mt-6 bg-ivory rounded-lg border-2 border-navy p-6 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 max-w-3xl">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="px-2.5 py-0.5 rounded bg-navy text-amber-300 text-[11px] font-bold uppercase">🇺🇸 Signature Founder-Curated Corridor</span>
+                        <span class="text-xs font-semibold text-crimson">7N / 8D • New York, Washington D.C. &amp; Niagara Falls</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-navy">US East Coast &amp; University Graduation Family Tour</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Planning to attend your child's university graduation in the US or take a family trip to New York? Curated personally by Shubham Madhavi (4 years in NYC)—combining your <strong>B1/B2 Visitor Visa + 1-on-1 Mock Interview</strong> with flights, Manhattan stays, and East Coast sightseeing.
+                    </p>
+                </div>
+                <button type="button" onclick="prefillBuilder('Flights & Custom Holiday Package', 'US East Coast / Graduation Family Tour + B1/B2 Visa')"
+                        class="shrink-0 w-full lg:w-auto px-6 py-3.5 rounded-lg bg-navy hover:bg-navyLight text-white text-xs font-bold transition-colors">
+                    Plan USA Family Tour &amp; Visa &rarr;
+                </button>
+            </div>
+
+        </div>
+
+        <!-- PART 2: 4 DEDICATED SERVICE DESKS + TRANSPARENT CONSULTANCY FEE CARD -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-200 pt-16">
+
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-crimson">Standalone Visa, Passport &amp; Ticketing Desks</span>
+                    <h2 class="font-serif text-2xl sm:text-4xl font-bold text-navy mt-1">
+                        Need Only a Visa, Passport, or Flight? Open a Dedicated Desk
+                    </h2>
+                </div>
+                <p class="text-sm text-slate-600 max-w-md">
+                    Government/embassy fees are paid at actuals. Below are our dedicated service desks and transparent professional consultancy fees.
                 </p>
             </div>
 
@@ -819,21 +1187,21 @@
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-3xl">🇮🇳</span>
-                            <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-navy text-white">Local Desk</span>
+                            <span class="text-[11px] font-mono font-bold px-2.5 py-1 rounded bg-navy text-amber-300">Service: ₹1,000–₹2,500</span>
                         </div>
                         <h3 class="font-serif font-bold text-lg text-navy">Indian Passport &amp; Tatkaal Desk</h3>
                         <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                            Fast, accurate online filing and document verification before your PSK appointment for Taloja, Panvel, Kharghar, and Navi Mumbai residents.
+                            Online filing and pre-PSK original document verification for Taloja, Panvel, Kharghar, and Navi Mumbai residents.
                         </p>
                         <ul class="mt-4 space-y-1.5 text-xs text-slate-700 border-t border-slate-200 pt-3">
-                            <li>• Fresh &amp; 10-Year Renewal Passports</li>
-                            <li>• Urgent Tatkaal Slots &amp; PCC Filing</li>
-                            <li>• Minor Passports &amp; Name/Address Updates</li>
+                            <li>• <strong>Fresh / Renewal:</strong> ₹1,000 – ₹1,500 + Govt fee</li>
+                            <li>• <strong>Urgent Tatkaal:</strong> ₹2,000 – ₹2,500 + Govt fee</li>
+                            <li>• <strong>PCC / Minor / Updates:</strong> ₹1,000 – ₹1,500</li>
                         </ul>
                     </div>
                     <button type="button" onclick="openPage('passport')"
                             class="mt-5 w-full py-2.5 px-3 rounded-lg bg-navy hover:bg-navyLight text-white text-center text-xs font-bold transition-colors block">
-                        Open Passport Desk Page &rarr;
+                        Open Passport Desk &rarr;
                     </button>
                 </div>
 
@@ -842,16 +1210,16 @@
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-3xl">🇺🇸</span>
-                            <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-goldLight text-amber-900 border border-gold/40">F1 &amp; B1/B2</span>
+                            <span class="text-[11px] font-mono font-bold px-2.5 py-1 rounded bg-goldLight text-amber-900 border border-gold/40">Prep: ₹4,000–₹8,000</span>
                         </div>
                         <h3 class="font-serif font-bold text-lg text-navy">US Visa &amp; Interview Prep</h3>
                         <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                            Line-by-line DS-160 drafting, sponsor financial structuring, 214(b) refusal re-application strategy, and 1-on-1 mock counter interviews.
+                            Line-by-line DS-160 drafting, sponsor financial structuring, 214(b) refusal audits, and 1-on-1 mock counter interviews.
                         </p>
                         <ul class="mt-4 space-y-1.5 text-xs text-slate-700 border-t border-slate-200 pt-3">
-                            <li>• F1 Student Visa &amp; Mock Interviews</li>
-                            <li>• B1/B2 Visitor, Family &amp; Business Visas</li>
-                            <li>• Section 214(b) Refusal Case Audits</li>
+                            <li>• <strong>F1 Student Coaching:</strong> ₹5,000 – ₹8,000</li>
+                            <li>• <strong>B1/B2 Visitor / Family:</strong> ₹4,000 – ₹6,000</li>
+                            <li>• <strong>214(b) Refusal Audit:</strong> ₹6,000 – ₹9,000</li>
                         </ul>
                     </div>
                     <button type="button" onclick="openPage('us-visa')"
@@ -865,16 +1233,16 @@
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-3xl">🇪🇺 🇦🇪</span>
-                            <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-emerald-100 text-emerald-800">Tourist &amp; Business</span>
+                            <span class="text-[11px] font-mono font-bold px-2.5 py-1 rounded bg-emerald-100 text-emerald-800">Service: ₹1,000–₹4,500</span>
                         </div>
                         <h3 class="font-serif font-bold text-lg text-navy">Schengen, UAE &amp; Global Visas</h3>
                         <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                            Embassy cover letters, flight &amp; hotel itineraries, VFS biometric bookings, and quick tourist e-Visas for families and working professionals.
+                            Embassy cover letters, flight &amp; hotel itineraries, VFS biometric bookings, and fast tourist e-Visas.
                         </p>
                         <ul class="mt-4 space-y-1.5 text-xs text-slate-700 border-t border-slate-200 pt-3">
-                            <li>• Schengen Europe (Swiss, France, Italy)</li>
-                            <li>• Dubai / UAE, Singapore, Japan &amp; Asia</li>
-                            <li>• UK, Australia &amp; Canada Visitor Visas</li>
+                            <li>• <strong>Dubai / Asia e-Visas:</strong> ₹1,000 – ₹2,500 service</li>
+                            <li>• <strong>Schengen / UK / Aus:</strong> ₹3,500 – ₹4,500</li>
+                            <li>• <strong>South Africa / Japan:</strong> ₹2,500 – ₹3,500</li>
                         </ul>
                     </div>
                     <button type="button" onclick="openPage('global-visas')"
@@ -888,16 +1256,16 @@
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-3xl">✈️ 📸</span>
-                            <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-slate-200 text-slate-800">Tours &amp; Tickets</span>
+                            <span class="text-[11px] font-mono font-bold px-2.5 py-1 rounded bg-slate-200 text-slate-800">Ticketing: ₹500–₹1,000</span>
                         </div>
                         <h3 class="font-serif font-bold text-lg text-navy">Flights, Holidays &amp; Photo Add-On</h3>
                         <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                            International and domestic airfares, student extra-baggage tickets, custom family tours, and optional travel photography packages.
+                            International/domestic airfares, student extra-baggage tickets, custom family tours, and travel photography add-ons.
                         </p>
                         <ul class="mt-4 space-y-1.5 text-xs text-slate-700 border-t border-slate-200 pt-3">
-                            <li>• Student Special Airfares (Extra Luggage)</li>
-                            <li>• Custom Domestic &amp; International Tours</li>
-                            <li>• Travel Photography &amp; Video Add-On</li>
+                            <li>• <strong>Flight Ticketing:</strong> ₹500 – ₹1,000 service fee</li>
+                            <li>• <strong>Visa Dummy Flight/Hotel:</strong> ₹1,000 – ₹1,500</li>
+                            <li>• <strong>Tour Visa Filing:</strong> Complimentary with tour</li>
                         </ul>
                     </div>
                     <button type="button" onclick="openPage('flights')"
@@ -921,21 +1289,24 @@
                     <div>
                         <span class="text-xs font-bold uppercase tracking-wider text-crimson">Taloja, Panvel, Kharghar &amp; Navi Mumbai</span>
                         <h2 class="font-serif text-2xl sm:text-4xl font-bold text-navy mt-1">
-                            Passport Services &amp; Document Checklists
+                            Passport Services, Checklists &amp; Service Fees
                         </h2>
                     </div>
                     <p class="text-sm text-slate-600 max-w-md">
-                        Every form is filled accurately on the official Passport Seva portal and your original documents are verified before your appointment.
+                        Government Passport Seva fees are paid at actuals. Our consultancy fee covers form filing, document audit, and appointment booking.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="bg-ivory rounded-lg p-6 border border-slate-200 border-t-4 border-t-navy flex flex-col justify-between shadow-sm">
                         <div>
-                            <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-navy text-white">New &amp; Renewal</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-navy text-white">New &amp; Renewal</span>
+                                <span class="font-mono text-xs font-bold text-navy">₹1,000–₹1,500</span>
+                            </div>
                             <h3 class="font-serif font-bold text-lg text-navy mt-3">Fresh &amp; 10-Year Re-issue</h3>
                             <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                                For first-time applicants or expiring/expired passports, damaged booklets, or exhausted pages.
+                                For first-time applicants or expiring/expired passports, damaged booklets, or exhausted pages. (Govt fee ₹1,500 extra).
                             </p>
                             <ul class="mt-4 space-y-1.5 text-xs text-slate-700 border-t border-slate-200 pt-3">
                                 <li>• Aadhaar + PAN / Voter ID check</li>
@@ -951,10 +1322,13 @@
 
                     <div class="bg-ivory rounded-lg p-6 border border-slate-200 border-t-4 border-t-crimson flex flex-col justify-between shadow-sm">
                         <div>
-                            <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-goldLight text-amber-900 border border-gold/40">Fast-Track</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-goldLight text-amber-900 border border-gold/40">Fast-Track</span>
+                                <span class="font-mono text-xs font-bold text-crimson">₹2,000–₹2,500</span>
+                            </div>
                             <h3 class="font-serif font-bold text-lg text-navy mt-3">Urgent Tatkaal Passport</h3>
                             <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                                Priority slot booking and multi-ID verification for urgent travel, job joining, or student intake deadlines.
+                                Priority slot booking and multi-ID verification for urgent travel or intake deadlines. (Govt Tatkaal fee ₹3,500 extra).
                             </p>
                             <ul class="mt-4 space-y-1.5 text-xs text-slate-700 border-t border-slate-200 pt-3">
                                 <li>• 3 Eligible IDs verified for Tatkaal</li>
@@ -970,10 +1344,13 @@
 
                     <div class="bg-ivory rounded-lg p-6 border border-slate-200 border-t-4 border-t-gold flex flex-col justify-between shadow-sm">
                         <div>
-                            <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-emerald-100 text-emerald-800">Employment &amp; PR</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-emerald-100 text-emerald-800">Employment &amp; PR</span>
+                                <span class="font-mono text-xs font-bold text-navy">₹1,000–₹1,500</span>
+                            </div>
                             <h3 class="font-serif font-bold text-lg text-navy mt-3">Police Clearance (PCC)</h3>
                             <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                                Required for overseas work visas, Gulf/European employment permits, and Permanent Residency filings.
+                                Required for overseas work visas, Gulf/European employment permits, and Permanent Residency filings. (Govt fee ₹500 extra).
                             </p>
                             <ul class="mt-4 space-y-1.5 text-xs text-slate-700 border-t border-slate-200 pt-3">
                                 <li>• Current address match with Passport</li>
@@ -989,7 +1366,10 @@
 
                     <div class="bg-ivory rounded-lg p-6 border border-slate-200 border-t-4 border-t-navy flex flex-col justify-between shadow-sm">
                         <div>
-                            <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-slate-200 text-slate-800">Family &amp; Updates</span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-slate-200 text-slate-800">Family &amp; Updates</span>
+                                <span class="font-mono text-xs font-bold text-navy">₹1,000–₹1,500</span>
+                            </div>
                             <h3 class="font-serif font-bold text-lg text-navy mt-3">Minors &amp; Name/Address Updates</h3>
                             <p class="text-xs text-slate-600 mt-2 leading-relaxed">
                                 Passports for infants and children under 18, spouse name endorsement after marriage, or address changes.
@@ -1107,10 +1487,13 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-slate-200">
                 <div class="bg-ivory rounded-lg p-6 border border-slate-200 border-t-4 border-t-navy flex flex-col justify-between shadow-sm">
                     <div>
-                        <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-navy text-white">Students (MS / BS / MBA)</span>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-navy text-white">Students (MS / BS / MBA)</span>
+                            <span class="font-mono text-xs font-bold text-navy">₹5,000 – ₹8,000</span>
+                        </div>
                         <h3 class="font-serif font-bold text-lg text-navy mt-3">F1 Student Visa Coaching</h3>
                         <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                            I-20 review, SEVIS fee &amp; slot guidance, DS-160 academic/work description drafting, loan &amp; sponsor structuring, and 1-on-1 mock counter interviews.
+                            I-20 review, SEVIS &amp; slot guidance, DS-160 academic/work description drafting, loan &amp; sponsor structuring, and 1-on-1 mock counter interviews. (US Embassy $185 MRV fee extra at actuals).
                         </p>
                     </div>
                     <button type="button" onclick="prefillBuilder('US F1 / B1-B2 Visa & Interview Prep', 'F1 Student Visa Coaching')"
@@ -1121,7 +1504,10 @@
 
                 <div class="bg-ivory rounded-lg p-6 border border-slate-200 border-t-4 border-t-gold flex flex-col justify-between shadow-sm">
                     <div>
-                        <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-goldLight text-amber-900 border border-gold/40">Tourist / Parents / Business</span>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-goldLight text-amber-900 border border-gold/40">Tourist / Parents / Business</span>
+                            <span class="font-mono text-xs font-bold text-navy">₹4,000 – ₹6,000</span>
+                        </div>
                         <h3 class="font-serif font-bold text-lg text-navy mt-3">B1/B2 Visitor &amp; Family Visas</h3>
                         <p class="text-xs text-slate-600 mt-2 leading-relaxed">
                             For parents visiting children in the US, university graduation visits, family tourism, or corporate B1 meetings. Complete DS-160 and interview preparation in English, Hindi, or Marathi.
@@ -1135,7 +1521,10 @@
 
                 <div class="bg-ivory rounded-lg p-6 border border-slate-200 border-t-4 border-t-crimson flex flex-col justify-between shadow-sm">
                     <div>
-                        <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-red-100 text-crimson">Prior Refusal Cases</span>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-red-100 text-crimson">Prior Refusal Cases</span>
+                            <span class="font-mono text-xs font-bold text-crimson">₹6,000 – ₹9,000</span>
+                        </div>
                         <h3 class="font-serif font-bold text-lg text-navy mt-3">Section 214(b) Refusal Audit</h3>
                         <p class="text-xs text-slate-600 mt-2 leading-relaxed">
                             Detailed comparison of your previous DS-160 and interview transcript to identify what triggered the refusal and rebuild your re-application clearly.
@@ -1159,13 +1548,13 @@
 
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
                 <div>
-                    <span class="text-xs font-bold uppercase tracking-wider text-crimson">Global Visa Assistance</span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-crimson">Global Visa Assistance &amp; Transparent Service Fees</span>
                     <h2 class="font-serif text-2xl sm:text-4xl font-bold text-navy mt-1">
                         Popular Visas &amp; Travel Corridors We Handle
                     </h2>
                 </div>
                 <p class="text-sm text-slate-600 max-w-md">
-                    Complete end-to-end documentation, cover letters, flight/hotel itineraries, and VFS appointment booking.
+                    Embassy/VFS fees are paid at actuals. Our consultancy fee covers cover letters, flight/hotel itineraries, and appointment booking.
                 </p>
             </div>
 
@@ -1176,7 +1565,7 @@
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-3xl">🇪🇺</span>
-                            <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-goldLight text-amber-900 border border-gold/40">29 Countries</span>
+                            <span class="text-[11px] font-mono font-bold px-2.5 py-1 rounded bg-goldLight text-amber-900 border border-gold/40">₹3,500–₹4,500</span>
                         </div>
                         <h3 class="font-serif font-bold text-lg text-navy">Schengen Europe</h3>
                         <p class="text-xs text-slate-600 mt-2 leading-relaxed">
@@ -1198,15 +1587,15 @@
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-3xl">🇦🇪 🇸🇬</span>
-                            <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-emerald-100 text-emerald-800">e-Visa &amp; Sticker</span>
+                            <span class="text-[11px] font-mono font-bold px-2.5 py-1 rounded bg-emerald-100 text-emerald-800">₹1,000–₹2,500</span>
                         </div>
                         <h3 class="font-serif font-bold text-lg text-navy">Dubai, Singapore &amp; Asia</h3>
                         <p class="text-xs text-slate-600 mt-2 leading-relaxed">
                             Quick UAE tourist e-Visas, Singapore submissions, and complete holiday packages for families and couples.
                         </p>
                         <ul class="mt-4 space-y-1.5 text-xs text-slate-700 border-t border-slate-200 pt-3">
-                            <li>• Dubai (30/60 Days), Singapore, Japan</li>
-                            <li>• Thailand, Bali, Vietnam, Malaysia</li>
+                            <li>• Dubai (30/60 Days), Singapore, Vietnam</li>
+                            <li>• Thailand TDAC, Bali e-VOA, Malaysia</li>
                         </ul>
                     </div>
                     <button type="button" onclick="prefillBuilder('Schengen / UK / Global Tourist Visa', 'Dubai / Singapore / Asia Visa')"
@@ -1220,7 +1609,7 @@
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-3xl">🇬🇧 🇦🇺</span>
-                            <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-slate-200 text-slate-800">Visitor &amp; Family</span>
+                            <span class="text-[11px] font-mono font-bold px-2.5 py-1 rounded bg-slate-200 text-slate-800">₹3,500–₹5,000</span>
                         </div>
                         <h3 class="font-serif font-bold text-lg text-navy">UK, Australia &amp; Canada</h3>
                         <p class="text-xs text-slate-600 mt-2 leading-relaxed">
@@ -1237,25 +1626,25 @@
                     </button>
                 </div>
 
-                <!-- Country Card 4: Japan, Turkey & Global Business -->
+                <!-- Country Card 4: South Africa, Japan & Business -->
                 <div class="bg-ivory rounded-lg p-6 border border-slate-200 border-t-4 border-t-navy flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-3xl">🇯🇵 🇹🇷</span>
-                            <span class="text-[11px] font-bold uppercase px-2.5 py-1 rounded bg-navy text-white">Tourist &amp; Corporate</span>
+                            <span class="text-3xl">🇿🇦 🇯🇵</span>
+                            <span class="text-[11px] font-mono font-bold px-2.5 py-1 rounded bg-navy text-white">₹2,500–₹3,500</span>
                         </div>
-                        <h3 class="font-serif font-bold text-lg text-navy">Japan, Turkey &amp; Business</h3>
+                        <h3 class="font-serif font-bold text-lg text-navy">South Africa, Japan &amp; Global</h3>
                         <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                            Detailed day-by-day schedule of stay for Japan, Turkey sticker/e-Visas, and corporate business travel documentation.
+                            South Africa tourist/safari visas, Japan day-by-day schedule of stay filings, Turkey visas, and corporate business travel files.
                         </p>
                         <ul class="mt-4 space-y-1.5 text-xs text-slate-700 border-t border-slate-200 pt-3">
-                            <li>• Japan Tourist &amp; Business Visas</li>
+                            <li>• South Africa &amp; Japan Tourist/Business</li>
                             <li>• Turkey, South Korea, Egypt &amp; more</li>
                         </ul>
                     </div>
-                    <button type="button" onclick="prefillBuilder('Schengen / UK / Global Tourist Visa', 'Japan / Turkey / Business Visa')"
+                    <button type="button" onclick="prefillBuilder('Schengen / UK / Global Tourist Visa', 'South Africa / Japan / Business Visa')"
                             class="mt-5 w-full py-2.5 px-3 rounded-lg bg-white hover:bg-navy hover:text-white text-navy border border-navy text-xs font-bold transition-colors">
-                        Enquire for Japan / Global &rarr;
+                        Enquire for SA / Japan &rarr;
                     </button>
                 </div>
 
@@ -1269,11 +1658,17 @@
     <section data-page-section="flights" class="hidden py-14 md:py-20 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div class="max-w-2xl mb-10">
-                <span class="text-xs font-bold uppercase tracking-wider text-navy">Complete Travel Desk</span>
-                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-navy mt-1">
-                    Flights, Custom Holidays &amp; Photography Add-On
-                </h2>
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-navy">Complete Travel Desk</span>
+                    <h2 class="font-serif text-2xl sm:text-4xl font-bold text-navy mt-1">
+                        Flights, Custom Holidays &amp; Photography Add-On
+                    </h2>
+                </div>
+                <button type="button" onclick="openPage('home', undefined, true); document.getElementById('curated-tours').scrollIntoView({behavior:'smooth'});"
+                        class="text-xs font-bold text-crimson hover:underline">
+                    View all 10 Curated Tour Packages &rarr;
+                </button>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -1281,8 +1676,11 @@
                 <!-- Service 1: Student & International Flights -->
                 <div class="bg-ivory rounded-lg p-6 border border-slate-200 flex flex-col justify-between shadow-sm">
                     <div>
-                        <div class="w-11 h-11 rounded-lg bg-navy text-amber-300 flex items-center justify-center text-lg mb-4">
-                            <i class="fa-solid fa-plane-up"></i>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-11 h-11 rounded-lg bg-navy text-amber-300 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-plane-up"></i>
+                            </div>
+                            <span class="font-mono text-xs font-bold text-navy">Fee: ₹500–₹1,000</span>
                         </div>
                         <h3 class="font-serif font-bold text-xl text-navy">International &amp; Student Flights</h3>
                         <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
@@ -1290,7 +1688,7 @@
                         </p>
                         <ul class="mt-4 space-y-2 text-xs text-slate-700 border-t border-slate-200 pt-4">
                             <li><strong>• Student Special Fares:</strong> Up to 3x23kg baggage &amp; flexible change rules</li>
-                            <li><strong>• Direct &amp; Transit Check:</strong> Transit visa check before issuing tickets</li>
+                            <li><strong>• Visa Flight/Hotel Itinerary:</strong> ₹1,000 – ₹1,500 (for embassy submission)</li>
                             <li><strong>• Group &amp; Corporate Fares:</strong> Family and business ticketing</li>
                         </ul>
                     </div>
@@ -1303,17 +1701,20 @@
                 <!-- Service 2: Custom Family & Honeymoon Tours -->
                 <div class="bg-ivory rounded-lg p-6 border border-slate-200 flex flex-col justify-between shadow-sm">
                     <div>
-                        <div class="w-11 h-11 rounded-lg bg-navy text-amber-300 flex items-center justify-center text-lg mb-4">
-                            <i class="fa-solid fa-map-location-dot"></i>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-11 h-11 rounded-lg bg-navy text-amber-300 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <span class="font-mono text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded">Visa Filing Included</span>
                         </div>
                         <h3 class="font-serif font-bold text-xl text-navy">Custom Family &amp; Couple Tours</h3>
                         <p class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">
-                            Tailor-made domestic and international itineraries built around your family's pace—flights, verified hotels, private transfers, and visas included.
+                            Tailor-made domestic and international itineraries built around your family's pace—flights, verified hotels, private transfers, and visa service included.
                         </p>
                         <ul class="mt-4 space-y-2 text-xs text-slate-700 border-t border-slate-200 pt-4">
-                            <li><strong>• Domestic Tours:</strong> Kashmir, Kerala, Goa, Himachal, Ladakh, Andaman</li>
-                            <li><strong>• International Tours:</strong> Dubai, Bali, Thailand, Vietnam, Europe</li>
-                            <li><strong>• End-to-End Support:</strong> Direct WhatsApp assistance throughout your trip</li>
+                            <li><strong>• International:</strong> Thailand, Dubai, Bali, South Africa, Vietnam, Singapore, Europe, Japan</li>
+                            <li><strong>• Domestic:</strong> Kashmir, Kerala, Andaman, Himachal, Goa</li>
+                            <li><strong>• Zero Visa Hassle:</strong> Complimentary visa assistance on full packages</li>
                         </ul>
                     </div>
                     <button type="button" onclick="prefillBuilder('Flights & Custom Holiday Package', 'Custom Family / Honeymoon Tour Package')"
