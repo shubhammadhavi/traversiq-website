@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://traversiq.com/sitemap.xml
