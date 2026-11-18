@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------------
+   Site CSS, moved out of the inline <style> block in each page.
+   Edit here and re-run `npm run build:css`.
+--------------------------------------------------------------------------- */
+
+body {
+  background-color: #FAF8F3;
+  color: #0F172A;
+  overflow-x: hidden;
+}
+
+.service-btn-active {
+  background-color: #0B1F3A !important;
+  color: #FFFFFF !important;
+  border-color: #0B1F3A !important;
+  box-shadow: 0 2px 6px rgba(11, 31, 58, 0.18);
+}
+
+.service-btn-active i {
+  color: #FCD34D !important;
+}
+
+.logo-medallion-crop {
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.18);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Windows-compatible country code pill badge.
+   600 is the heaviest JetBrains Mono weight actually loaded; 700 rendered
+   as synthetic faux-bold. */
+.code-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 2px 5px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}

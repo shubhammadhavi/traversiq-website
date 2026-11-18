@@ -1,0 +1,13 @@
+{
+  "name": "traversiq-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Build the site stylesheet so visitors do not download Tailwind's in-browser compiler.",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./assets/tw.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./assets/tw.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
