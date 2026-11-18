@@ -1,0 +1,52 @@
+name: Build stylesheet
+
+# Compiles src/input.css -> assets/tw.css so visitors never download
+# Tailwind's in-browser JIT compiler. Commits the result when it changes.
+on:
+  push:
+    paths:
+      - '**/*.html'
+      - 'src/input.css'
+      - 'tailwind.config.js'
+      - 'package.json'
+      - '.github/workflows/build-css.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: npm install --no-audit --no-fund
+
+      - run: npm run build:css
+
+      - name: Report size
+        run: |
+          echo "assets/tw.css is $(wc -c < assets/tw.css) bytes"
+
+      - name: Upload for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: tw-css
+          path: assets/tw.css
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- assets/tw.css; then
+            echo "stylesheet unchanged"
+          else
+            git add assets/tw.css
+            git commit -m "build: regenerate assets/tw.css [skip ci]"
+            git push
+          fi
