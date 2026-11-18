@@ -43,10 +43,12 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- assets/tw.css; then
+          # `git diff` is always quiet for an untracked file, so stage first
+          # and compare the index — otherwise the very first build commits nothing.
+          git add -f assets/tw.css
+          if git diff --cached --quiet -- assets/tw.css; then
             echo "stylesheet unchanged"
           else
-            git add assets/tw.css
             git commit -m "build: regenerate assets/tw.css [skip ci]"
             git push
           fi
